@@ -10158,17 +10158,24 @@ This will fail in production.`);
     const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2$1);
     const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_3);
     return vue.openBlock(), vue.createElementBlock("view", { class: "record-container" }, [
+      vue.createCommentVNode(" 顶部导航 "),
+      vue.createElementVNode("view", { class: "nav-bar" }, [
+        vue.createElementVNode("text", {
+          class: "iconfont icon-back",
+          onClick: _cache[0] || (_cache[0] = ($event) => _ctx.uni.navigateBack())
+        }),
+        vue.createElementVNode("text", { class: "title" }, "记账")
+      ]),
       vue.createCommentVNode(" 类型切换 "),
       vue.createElementVNode("view", { class: "type-switch" }, [
         vue.createElementVNode(
           "view",
           {
             class: vue.normalizeClass(["switch-item", { active: $setup.formData.type === 0 }]),
-            onClick: _cache[0] || (_cache[0] = ($event) => $setup.handleTypeChange({ currentIndex: 0 }))
+            onClick: _cache[1] || (_cache[1] = ($event) => $setup.handleTypeChange({ currentIndex: 0 }))
           },
           [
-            vue.createElementVNode("text", { class: "iconfont icon-expense" }),
-            vue.createElementVNode("text", null, "支出")
+            vue.createElementVNode("text", { class: "type-text expense" }, "支出")
           ],
           2
           /* CLASS */
@@ -10177,11 +10184,10 @@ This will fail in production.`);
           "view",
           {
             class: vue.normalizeClass(["switch-item", { active: $setup.formData.type === 1 }]),
-            onClick: _cache[1] || (_cache[1] = ($event) => $setup.handleTypeChange({ currentIndex: 1 }))
+            onClick: _cache[2] || (_cache[2] = ($event) => $setup.handleTypeChange({ currentIndex: 1 }))
           },
           [
-            vue.createElementVNode("text", { class: "iconfont icon-income" }),
-            vue.createElementVNode("text", null, "收入")
+            vue.createElementVNode("text", { class: "type-text income" }, "收入")
           ],
           2
           /* CLASS */
@@ -10194,7 +10200,7 @@ This will fail in production.`);
           "input",
           {
             type: "digit",
-            "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => $setup.formData.amount = $event),
+            "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => $setup.formData.amount = $event),
             placeholder: "请输入金额",
             "placeholder-class": "placeholder"
           },
@@ -10218,15 +10224,17 @@ This will fail in production.`);
                 class: vue.normalizeClass(["category-item", { active: $setup.formData.category_id === item.value }]),
                 onClick: ($event) => $setup.handleQuickCategorySelect(item)
               }, [
-                vue.createElementVNode(
-                  "text",
-                  {
-                    class: vue.normalizeClass(["iconfont", item.icon])
-                  },
-                  null,
-                  2
-                  /* CLASS */
-                ),
+                vue.createElementVNode("view", { class: "icon-wrapper" }, [
+                  vue.createElementVNode(
+                    "text",
+                    {
+                      class: vue.normalizeClass(["iconfont", item.icon])
+                    },
+                    null,
+                    2
+                    /* CLASS */
+                  )
+                ]),
                 vue.createElementVNode(
                   "text",
                   { class: "category-name" },
@@ -10310,7 +10318,7 @@ This will fail in production.`);
                   vue.createElementVNode("view", { class: "value" }, [
                     vue.createVNode(_component_uni_datetime_picker, {
                       modelValue: $setup.formData.date,
-                      "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => $setup.formData.date = $event),
+                      "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => $setup.formData.date = $event),
                       type: "date",
                       "clear-icon": false
                     }, null, 8, ["modelValue"])

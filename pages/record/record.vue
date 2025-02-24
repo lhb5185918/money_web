@@ -1,14 +1,18 @@
 <template>
 	<view class="record-container">
+		<!-- 顶部导航 -->
+		<view class="nav-bar">
+			<text class="iconfont icon-back" @click="uni.navigateBack()"></text>
+			<text class="title">记账</text>
+		</view>
+		
 		<!-- 类型切换 -->
 		<view class="type-switch">
 			<view class="switch-item" :class="{ active: formData.type === 0 }" @click="handleTypeChange({ currentIndex: 0 })">
-				<text class="iconfont icon-expense"></text>
-				<text>支出</text>
+				<text class="type-text expense">支出</text>
 			</view>
 			<view class="switch-item" :class="{ active: formData.type === 1 }" @click="handleTypeChange({ currentIndex: 1 })">
-				<text class="iconfont icon-income"></text>
-				<text>收入</text>
+				<text class="type-text income">收入</text>
 			</view>
 		</view>
 		
@@ -34,7 +38,9 @@
 					:class="{ active: formData.category_id === item.value }"
 					@click="handleQuickCategorySelect(item)"
 				>
-					<text class="iconfont" :class="item.icon"></text>
+					<view class="icon-wrapper">
+						<text class="iconfont" :class="item.icon"></text>
+					</view>
 					<text class="category-name">{{item.text}}</text>
 				</view>
 			</view>
@@ -301,95 +307,159 @@ const handleAccountSelect = (item) => {
 <style lang="scss">
 .record-container {
 	min-height: 100vh;
-	background-color: #f5f5f5;
+	background: linear-gradient(to bottom, #f0f7ff 0%, #f5f5f5 30%);
 	padding-bottom: env(safe-area-inset-bottom);
+	
+	.nav-bar {
+		display: flex;
+		align-items: center;
+		padding: 20rpx 30rpx;
+		background: transparent;
+		
+		.icon-back {
+			font-size: 40rpx;
+			color: #333;
+			padding: 10rpx;
+		}
+		
+		.title {
+			flex: 1;
+			text-align: center;
+			font-size: 36rpx;
+			font-weight: 500;
+			color: #333;
+			margin-right: 50rpx; // 补偿返回按钮的宽度,使标题居中
+		}
+	}
 	
 	.type-switch {
 		display: flex;
-		background: #fff;
-		padding: 20rpx;
+		background: rgba(255, 255, 255, 0.9);
+		margin: 20rpx 30rpx;
+		border-radius: 16rpx;
+		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+		overflow: hidden;
 		
 		.switch-item {
 			flex: 1;
 			height: 100rpx;
 			display: flex;
-			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			color: #666;
-			transition: all 0.3s ease;
-			
-			.iconfont {
-				font-size: 48rpx;
-				margin-bottom: 8rpx;
-			}
-			
-			text:last-child {
-				font-size: 28rpx;
-			}
+			position: relative;
 			
 			&.active {
-				color: #2979ff;
+				background: #fff;
 				
-				&:first-child {
-					color: #ff4d4f;
+				&:first-child .type-text.expense {
+					background: linear-gradient(45deg, #ff4d4f, #ff7875);
+					-webkit-background-clip: text;
+					color: transparent;
+					font-weight: bold;
+				}
+				
+				&:last-child .type-text.income {
+					background: linear-gradient(45deg, #2979ff, #1565c0);
+					-webkit-background-clip: text;
+					color: transparent;
+					font-weight: bold;
+				}
+				
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 25%;
+					width: 50%;
+					height: 4rpx;
+					border-radius: 2rpx;
+					background: currentColor;
+				}
+			}
+			
+			.type-text {
+				font-size: 32rpx;
+				font-weight: 500;
+				
+				&.expense {
+					color: #666;
+				}
+				
+				&.income {
+					color: #666;
 				}
 			}
 		}
 	}
 	
 	.amount-input {
-		background: #fff;
+		background: rgba(255, 255, 255, 0.9);
+		margin: 20rpx 30rpx;
 		padding: 40rpx 30rpx;
+		border-radius: 16rpx;
+		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
 		display: flex;
 		align-items: center;
-		border-top: 1rpx solid #f5f5f5;
 		
 		.currency {
 			font-size: 48rpx;
 			color: #333;
 			margin-right: 20rpx;
+			font-weight: 500;
 		}
 		
 		input {
 			flex: 1;
 			font-size: 48rpx;
 			color: #333;
+			font-weight: 500;
 		}
 		
 		.placeholder {
 			color: #999;
+			font-weight: normal;
 		}
 	}
 	
 	.quick-categories {
-		background: #fff;
+		background: rgba(255, 255, 255, 0.9);
+		margin: 20rpx 30rpx;
 		padding: 30rpx;
-		margin-top: 20rpx;
+		border-radius: 16rpx;
+		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
 		
 		.section-title {
 			font-size: 28rpx;
 			color: #666;
-			margin-bottom: 20rpx;
+			margin-bottom: 30rpx;
+			font-weight: 500;
 		}
 		
 		.category-grid {
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
-			gap: 20rpx;
+			gap: 30rpx;
 			
 			.category-item {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				padding: 20rpx 0;
-				border-radius: 12rpx;
-				transition: all 0.3s ease;
 				
-				.iconfont {
-					font-size: 48rpx;
-					color: #666;
-					margin-bottom: 8rpx;
+				.icon-wrapper {
+					width: 100rpx;
+					height: 100rpx;
+					border-radius: 50%;
+					background: #f5f5f5;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-bottom: 16rpx;
+					transition: all 0.3s ease;
+					
+					.iconfont {
+						font-size: 48rpx;
+						color: #666;
+					}
 				}
 				
 				.category-name {
@@ -398,16 +468,30 @@ const handleAccountSelect = (item) => {
 				}
 				
 				&.active {
-					background: #f0f7ff;
+					.icon-wrapper {
+						background: #e6f0ff;
+						transform: scale(1.05);
+						
+						.iconfont {
+							color: #2979ff;
+						}
+					}
 					
-					.iconfont, .category-name {
+					.category-name {
 						color: #2979ff;
+						font-weight: 500;
 					}
 					
 					&:first-child {
-						background: #fff1f0;
+						.icon-wrapper {
+							background: #fff1f0;
+							
+							.iconfont {
+								color: #ff4d4f;
+							}
+						}
 						
-						.iconfont, .category-name {
+						.category-name {
 							color: #ff4d4f;
 						}
 					}
@@ -417,16 +501,18 @@ const handleAccountSelect = (item) => {
 	}
 	
 	.form-section {
-		background: #fff;
-		margin-top: 20rpx;
+		background: rgba(255, 255, 255, 0.9);
+		margin: 20rpx 30rpx;
 		padding: 0 30rpx;
+		border-radius: 16rpx;
+		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
 		
 		.form-item {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			height: 100rpx;
-			border-bottom: 1rpx solid #f5f5f5;
+			border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
 			
 			&:last-child {
 				border-bottom: none;
@@ -435,6 +521,7 @@ const handleAccountSelect = (item) => {
 			.label {
 				font-size: 30rpx;
 				color: #333;
+				font-weight: 500;
 			}
 			
 			.value {
@@ -455,16 +542,6 @@ const handleAccountSelect = (item) => {
 					color: #999;
 					margin-left: 10rpx;
 				}
-				
-				:deep(.uni-date) {
-					.uni-date-editor {
-						border: none;
-						
-						.uni-date-editor--x {
-							padding: 0;
-						}
-					}
-				}
 			}
 		}
 	}
@@ -476,14 +553,17 @@ const handleAccountSelect = (item) => {
 			width: 100%;
 			height: 90rpx;
 			line-height: 90rpx;
-			background: #2979ff;
+			background: linear-gradient(135deg, #2979ff, #1565c0);
 			color: #fff;
 			font-size: 32rpx;
+			font-weight: 500;
 			border-radius: 45rpx;
-			transition: opacity 0.3s ease;
+			transition: all 0.3s ease;
+			box-shadow: 0 4rpx 16rpx rgba(41, 121, 255, 0.2);
 			
 			&:active {
-				opacity: 0.8;
+				transform: scale(0.98);
+				box-shadow: 0 2rpx 8rpx rgba(41, 121, 255, 0.2);
 			}
 			
 			&::after {
@@ -577,25 +657,42 @@ const handleAccountSelect = (item) => {
 // 暗黑模式支持
 @media (prefers-color-scheme: dark) {
 	.record-container {
-		background-color: #1a1a1a;
+		background: linear-gradient(to bottom, #1a1a1a 0%, #2c2c2c 30%);
 		
-		.type-switch {
-			background: #2c2c2c;
-			
-			.switch-item {
-				color: #999;
-			}
-		}
-		
-		.amount-input {
-			background: #2c2c2c;
-			border-top-color: #333;
-			
-			.currency {
+		.nav-bar {
+			.icon-back {
 				color: #fff;
 			}
 			
-			input {
+			.title {
+				color: #fff;
+			}
+		}
+		
+		.type-switch {
+			background: rgba(44, 44, 44, 0.9);
+			box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.2);
+			
+			.switch-item {
+				&.active {
+					background: #333;
+				}
+				
+				.type-text {
+					&.expense, &.income {
+						color: #999;
+					}
+				}
+			}
+		}
+		
+		.amount-input, .quick-categories, .form-section {
+			background: rgba(44, 44, 44, 0.9);
+			box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.2);
+		}
+		
+		.amount-input {
+			.currency, input {
 				color: #fff;
 			}
 			
@@ -605,16 +702,18 @@ const handleAccountSelect = (item) => {
 		}
 		
 		.quick-categories {
-			background: #2c2c2c;
-			
 			.section-title {
 				color: #999;
 			}
 			
 			.category-grid {
 				.category-item {
-					.iconfont {
-						color: #999;
+					.icon-wrapper {
+						background: #333;
+						
+						.iconfont {
+							color: #999;
+						}
 					}
 					
 					.category-name {
@@ -622,17 +721,17 @@ const handleAccountSelect = (item) => {
 					}
 					
 					&.active {
-						background: #1a1a1a;
+						.icon-wrapper {
+							background: #1a1a1a;
+						}
 					}
 				}
 			}
 		}
 		
 		.form-section {
-			background: #2c2c2c;
-			
 			.form-item {
-				border-bottom-color: #333;
+				border-bottom-color: rgba(255, 255, 255, 0.1);
 				
 				.label {
 					color: #fff;
@@ -646,10 +745,17 @@ const handleAccountSelect = (item) => {
 							color: #666;
 						}
 					}
-					
-					.iconfont {
-						color: #666;
-					}
+				}
+			}
+		}
+		
+		.button-group {
+			.save-btn {
+				background: linear-gradient(135deg, #1565c0, #0d47a1);
+				box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.3);
+				
+				&:active {
+					box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.3);
 				}
 			}
 		}
