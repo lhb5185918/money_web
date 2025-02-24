@@ -1,0 +1,15 @@
+{
+  "name": "uni-money",
+  "version": "1.0.0",
+  "description": "家庭资产管理系统",
+  "main": "main.js",
+  "dependencies": {
+    "@dcloudio/uni-ui": "^1.5.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
