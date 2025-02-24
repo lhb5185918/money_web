@@ -757,7 +757,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-946bce22"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons.vue"]]);
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-946bce22"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons.vue"]]);
   const ON_SHOW = "onShow";
   const ON_HIDE = "onHide";
   const ON_LAUNCH = "onLaunch";
@@ -1153,7 +1153,7 @@ if (uni.restoreGlobal) {
     }
   };
   function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$2);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -1277,7 +1277,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-f7a14e66"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-easyinput/uni-easyinput.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-f7a14e66"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-easyinput/uni-easyinput.vue"]]);
   const _sfc_main$h = {
     name: "uniFormsItem",
     options: {
@@ -1666,7 +1666,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-3515f8e1"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms-item/uni-forms-item.vue"]]);
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-3515f8e1"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms-item/uni-forms-item.vue"]]);
   var pattern = {
     email: /^\S+?@\S+?\.\S+?$/,
     idcard: /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/,
@@ -2539,7 +2539,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-13523fe0"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms/uni-forms.vue"]]);
+  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-13523fe0"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms/uni-forms.vue"]]);
   var isVue2 = false;
   function set(target, key, val) {
     if (Array.isArray(target)) {
@@ -4203,9 +4203,9 @@ This will fail in production.`);
     }
   };
   function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_2$1);
-    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_1$2);
-    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_4);
+    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_0$3);
+    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_0$2);
+    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2$1);
     return vue.openBlock(), vue.createElementBlock("view", { class: "login-container" }, [
       vue.createElementVNode("view", { class: "login-box" }, [
         vue.createElementVNode("view", { class: "title" }, "登录"),
@@ -4808,7 +4808,7 @@ This will fail in production.`);
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-92d7b819"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge.vue"]]);
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-92d7b819"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge.vue"]]);
   const _sfc_main$b = {
     name: "UniListItem",
     emits: ["click", "switchChange"],
@@ -5047,8 +5047,8 @@ This will fail in production.`);
     }
   };
   function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$2);
-    const _component_uni_badge = resolveEasycom(vue.resolveDynamicComponent("uni-badge"), __easycom_1$1);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
+    const _component_uni_badge = resolveEasycom(vue.resolveDynamicComponent("uni-badge"), __easycom_1$2);
     return vue.openBlock(), vue.createElementBlock("view", {
       class: vue.normalizeClass([{ "uni-list-item--disabled": $props.disabled }, "uni-list-item"]),
       style: vue.normalizeStyle({ "background-color": $props.customStyle.backgroundColor }),
@@ -5175,7 +5175,7 @@ This will fail in production.`);
       })) : vue.createCommentVNode("v-if", true)
     ], 14, ["hover-class"]);
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-d88f6cd0"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-list-item/uni-list-item.vue"]]);
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-d88f6cd0"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-list-item/uni-list-item.vue"]]);
   const _sfc_main$a = {
     name: "uniList",
     "mp-weixin": {
@@ -5280,9 +5280,9 @@ This will fail in production.`);
   };
   function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_segmented_control = resolveEasycom(vue.resolveDynamicComponent("uni-segmented-control"), __easycom_0$1);
-    const _component_uni_list_item = resolveEasycom(vue.resolveDynamicComponent("uni-list-item"), __easycom_1);
+    const _component_uni_list_item = resolveEasycom(vue.resolveDynamicComponent("uni-list-item"), __easycom_1$1);
     const _component_uni_list = resolveEasycom(vue.resolveDynamicComponent("uni-list"), __easycom_2);
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$2);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createCommentVNode(" 资产分类标签页 "),
       vue.createVNode(_component_uni_segmented_control, {
@@ -7947,7 +7947,7 @@ This will fail in production.`);
   function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_calendar_item = vue.resolveComponent("calendar-item");
     const _component_time_picker = vue.resolveComponent("time-picker");
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$2);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -8895,7 +8895,7 @@ This will fail in production.`);
     }
   };
   function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$2);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
     const _component_time_picker = vue.resolveComponent("time-picker");
     const _component_Calendar = vue.resolveComponent("Calendar");
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-date" }, [
@@ -9238,7 +9238,7 @@ This will fail in production.`);
       }, null, 8, ["date", "defTime", "start-date", "end-date", "selectableTimes", "startPlaceholder", "endPlaceholder", "default-value", "pleStatus", "range", "hasTime", "hideSecond", "onConfirm", "onMaskClose", "onChange"])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-9a209c07"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/uni-datetime-picker.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-9a209c07"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/uni-datetime-picker.vue"]]);
   class MPAnimation {
     constructor(options, _this) {
       this.options = options;
@@ -10029,7 +10029,7 @@ This will fail in production.`);
       /* CLASS */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_5 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-7db519c7"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.vue"]]);
+  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-7db519c7"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.vue"]]);
   const _sfc_main$1 = {
     __name: "record",
     setup(__props, { expose: __expose }) {
@@ -10043,13 +10043,20 @@ This will fail in production.`);
         date: (/* @__PURE__ */ new Date()).toISOString().split("T")[0]
       });
       const categories = vue.ref([
-        { value: 1, text: "工资收入" },
-        { value: 2, text: "购物支出" },
-        { value: 3, text: "理财收益" },
-        { value: 4, text: "日常开销" },
-        { value: 5, text: "交通出行" },
-        { value: 6, text: "餐饮美食" }
+        { value: 1, text: "工资收入", icon: "icon-salary" },
+        { value: 2, text: "购物支出", icon: "icon-shopping" },
+        { value: 3, text: "理财收益", icon: "icon-finance" },
+        { value: 4, text: "日常开销", icon: "icon-daily" },
+        { value: 5, text: "交通出行", icon: "icon-transport" },
+        { value: 6, text: "餐饮美食", icon: "icon-food" },
+        { value: 7, text: "娱乐休闲", icon: "icon-entertainment" },
+        { value: 8, text: "居家生活", icon: "icon-home" },
+        { value: 9, text: "医疗健康", icon: "icon-medical" },
+        { value: 10, text: "教育培训", icon: "icon-education" }
       ]);
+      const quickCategories = vue.computed(() => {
+        return formData.type === 0 ? categories.value.filter((item) => [2, 4, 5, 6].includes(item.value)) : categories.value.filter((item) => [1, 3].includes(item.value));
+      });
       const accounts = vue.ref([
         { id: 1, name: "现金账户", balance: "28,500.00", type: "现金" },
         { id: 2, name: "工商银行", balance: "50,000.00", type: "银行卡" },
@@ -10078,6 +10085,10 @@ This will fail in production.`);
       };
       const handleTypeChange = (e) => {
         formData.type = e.currentIndex;
+        formData.category_id = "";
+      };
+      const handleQuickCategorySelect = (item) => {
+        formData.category_id = item.value;
       };
       const handleSubmit = async () => {
         try {
@@ -10134,7 +10145,7 @@ This will fail in production.`);
         formData.account_id = item.id;
         hideAccountPicker();
       };
-      const __returned__ = { form, formData, categories, accounts, rules, handleTypeChange, handleSubmit, categoryPicker, accountPicker, showCategoryPicker, hideCategoryPicker, showAccountPicker, hideAccountPicker, handleCategorySelect, handleAccountSelect, ref: vue.ref, reactive: vue.reactive, get request() {
+      const __returned__ = { form, formData, categories, quickCategories, accounts, rules, handleTypeChange, handleQuickCategorySelect, handleSubmit, categoryPicker, accountPicker, showCategoryPicker, hideCategoryPicker, showAccountPicker, hideAccountPicker, handleCategorySelect, handleAccountSelect, ref: vue.ref, reactive: vue.reactive, computed: vue.computed, get request() {
         return request;
       } };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
@@ -10142,59 +10153,123 @@ This will fail in production.`);
     }
   };
   function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_segmented_control = resolveEasycom(vue.resolveDynamicComponent("uni-segmented-control"), __easycom_0$1);
-    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_1$2);
-    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_2$1);
-    const _component_uni_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("uni-datetime-picker"), __easycom_3);
-    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_4);
-    const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_5);
+    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_0$2);
+    const _component_uni_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("uni-datetime-picker"), __easycom_1);
+    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2$1);
+    const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_3);
     return vue.openBlock(), vue.createElementBlock("view", { class: "record-container" }, [
-      vue.createElementVNode("view", { class: "record-form" }, [
+      vue.createCommentVNode(" 类型切换 "),
+      vue.createElementVNode("view", { class: "type-switch" }, [
+        vue.createElementVNode(
+          "view",
+          {
+            class: vue.normalizeClass(["switch-item", { active: $setup.formData.type === 0 }]),
+            onClick: _cache[0] || (_cache[0] = ($event) => $setup.handleTypeChange({ currentIndex: 0 }))
+          },
+          [
+            vue.createElementVNode("text", { class: "iconfont icon-expense" }),
+            vue.createElementVNode("text", null, "支出")
+          ],
+          2
+          /* CLASS */
+        ),
+        vue.createElementVNode(
+          "view",
+          {
+            class: vue.normalizeClass(["switch-item", { active: $setup.formData.type === 1 }]),
+            onClick: _cache[1] || (_cache[1] = ($event) => $setup.handleTypeChange({ currentIndex: 1 }))
+          },
+          [
+            vue.createElementVNode("text", { class: "iconfont icon-income" }),
+            vue.createElementVNode("text", null, "收入")
+          ],
+          2
+          /* CLASS */
+        )
+      ]),
+      vue.createCommentVNode(" 金额输入 "),
+      vue.createElementVNode("view", { class: "amount-input" }, [
+        vue.createElementVNode("text", { class: "currency" }, "￥"),
+        vue.withDirectives(vue.createElementVNode(
+          "input",
+          {
+            type: "digit",
+            "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => $setup.formData.amount = $event),
+            placeholder: "请输入金额",
+            "placeholder-class": "placeholder"
+          },
+          null,
+          512
+          /* NEED_PATCH */
+        ), [
+          [vue.vModelText, $setup.formData.amount]
+        ])
+      ]),
+      vue.createCommentVNode(" 常用分类 "),
+      vue.createElementVNode("view", { class: "quick-categories" }, [
+        vue.createElementVNode("text", { class: "section-title" }, "常用分类"),
+        vue.createElementVNode("view", { class: "category-grid" }, [
+          (vue.openBlock(true), vue.createElementBlock(
+            vue.Fragment,
+            null,
+            vue.renderList($setup.quickCategories, (item) => {
+              return vue.openBlock(), vue.createElementBlock("view", {
+                key: item.value,
+                class: vue.normalizeClass(["category-item", { active: $setup.formData.category_id === item.value }]),
+                onClick: ($event) => $setup.handleQuickCategorySelect(item)
+              }, [
+                vue.createElementVNode(
+                  "text",
+                  {
+                    class: vue.normalizeClass(["iconfont", item.icon])
+                  },
+                  null,
+                  2
+                  /* CLASS */
+                ),
+                vue.createElementVNode(
+                  "text",
+                  { class: "category-name" },
+                  vue.toDisplayString(item.text),
+                  1
+                  /* TEXT */
+                )
+              ], 10, ["onClick"]);
+            }),
+            128
+            /* KEYED_FRAGMENT */
+          ))
+        ])
+      ]),
+      vue.createCommentVNode(" 表单区域 "),
+      vue.createElementVNode("view", { class: "form-section" }, [
         vue.createVNode(_component_uni_forms, {
           ref: "form",
           modelValue: $setup.formData,
           rules: $setup.rules
         }, {
           default: vue.withCtx(() => [
-            vue.createVNode(_component_uni_forms_item, { name: "type" }, {
-              default: vue.withCtx(() => [
-                vue.createVNode(_component_uni_segmented_control, {
-                  current: $setup.formData.type,
-                  values: ["支出", "收入"],
-                  onClickItem: $setup.handleTypeChange
-                }, null, 8, ["current"])
-              ]),
-              _: 1
-              /* STABLE */
-            }),
-            vue.createVNode(_component_uni_forms_item, { name: "amount" }, {
-              default: vue.withCtx(() => [
-                vue.createVNode(_component_uni_easyinput, {
-                  modelValue: $setup.formData.amount,
-                  "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.formData.amount = $event),
-                  type: "number",
-                  placeholder: "请输入金额"
-                }, null, 8, ["modelValue"])
-              ]),
-              _: 1
-              /* STABLE */
-            }),
             vue.createVNode(_component_uni_forms_item, { name: "category_id" }, {
               default: vue.withCtx(() => {
                 var _a;
                 return [
                   vue.createElementVNode("view", {
-                    class: "select-input",
+                    class: "form-item",
                     onClick: $setup.showCategoryPicker
                   }, [
-                    vue.createElementVNode(
-                      "text",
-                      { class: "select-value" },
-                      vue.toDisplayString($setup.formData.category_id ? (_a = $setup.categories.find((item) => item.value === $setup.formData.category_id)) == null ? void 0 : _a.text : "请选择分类"),
-                      1
-                      /* TEXT */
-                    ),
-                    vue.createElementVNode("text", { class: "select-arrow iconfont icon-arrow-down" })
+                    vue.createElementVNode("text", { class: "label" }, "分类"),
+                    vue.createElementVNode("view", { class: "value" }, [
+                      vue.createElementVNode(
+                        "text",
+                        {
+                          class: vue.normalizeClass({ placeholder: !$setup.formData.category_id })
+                        },
+                        vue.toDisplayString($setup.formData.category_id ? (_a = $setup.categories.find((item) => item.value === $setup.formData.category_id)) == null ? void 0 : _a.text : "请选择分类"),
+                        3
+                        /* TEXT, CLASS */
+                      ),
+                      vue.createElementVNode("text", { class: "iconfont icon-arrow-right" })
+                    ])
                   ])
                 ];
               }),
@@ -10206,17 +10281,22 @@ This will fail in production.`);
                 var _a;
                 return [
                   vue.createElementVNode("view", {
-                    class: "select-input",
+                    class: "form-item",
                     onClick: $setup.showAccountPicker
                   }, [
-                    vue.createElementVNode(
-                      "text",
-                      { class: "select-value" },
-                      vue.toDisplayString($setup.formData.account_id ? (_a = $setup.accounts.find((item) => item.id === $setup.formData.account_id)) == null ? void 0 : _a.name : "请选择账户"),
-                      1
-                      /* TEXT */
-                    ),
-                    vue.createElementVNode("text", { class: "select-arrow iconfont icon-arrow-down" })
+                    vue.createElementVNode("text", { class: "label" }, "账户"),
+                    vue.createElementVNode("view", { class: "value" }, [
+                      vue.createElementVNode(
+                        "text",
+                        {
+                          class: vue.normalizeClass({ placeholder: !$setup.formData.account_id })
+                        },
+                        vue.toDisplayString($setup.formData.account_id ? (_a = $setup.accounts.find((item) => item.id === $setup.formData.account_id)) == null ? void 0 : _a.name : "请选择账户"),
+                        3
+                        /* TEXT, CLASS */
+                      ),
+                      vue.createElementVNode("text", { class: "iconfont icon-arrow-right" })
+                    ])
                   ])
                 ];
               }),
@@ -10225,12 +10305,17 @@ This will fail in production.`);
             }),
             vue.createVNode(_component_uni_forms_item, { name: "date" }, {
               default: vue.withCtx(() => [
-                vue.createVNode(_component_uni_datetime_picker, {
-                  modelValue: $setup.formData.date,
-                  "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.formData.date = $event),
-                  type: "date",
-                  "clear-icon": false
-                }, null, 8, ["modelValue"])
+                vue.createElementVNode("view", { class: "form-item" }, [
+                  vue.createElementVNode("text", { class: "label" }, "日期"),
+                  vue.createElementVNode("view", { class: "value" }, [
+                    vue.createVNode(_component_uni_datetime_picker, {
+                      modelValue: $setup.formData.date,
+                      "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => $setup.formData.date = $event),
+                      type: "date",
+                      "clear-icon": false
+                    }, null, 8, ["modelValue"])
+                  ])
+                ])
               ]),
               _: 1
               /* STABLE */
@@ -10238,7 +10323,10 @@ This will fail in production.`);
           ]),
           _: 1
           /* STABLE */
-        }, 8, ["modelValue"]),
+        }, 8, ["modelValue"])
+      ]),
+      vue.createCommentVNode(" 保存按钮 "),
+      vue.createElementVNode("view", { class: "button-group" }, [
         vue.createElementVNode("button", {
           class: "save-btn",
           onClick: $setup.handleSubmit
@@ -10261,7 +10349,7 @@ This will fail in production.`);
                 vue.createElementVNode("text", {
                   class: "close-btn iconfont icon-close",
                   onClick: $setup.hideCategoryPicker
-                }, "×")
+                })
               ]),
               vue.createElementVNode("view", { class: "picker-body" }, [
                 (vue.openBlock(true), vue.createElementBlock(
@@ -10273,17 +10361,28 @@ This will fail in production.`);
                       class: vue.normalizeClass(["picker-item", { active: $setup.formData.category_id === item.value }]),
                       onClick: ($event) => $setup.handleCategorySelect(item)
                     }, [
-                      vue.createElementVNode(
-                        "text",
-                        null,
-                        vue.toDisplayString(item.text),
-                        1
-                        /* TEXT */
-                      ),
+                      vue.createElementVNode("view", { class: "picker-item-left" }, [
+                        vue.createElementVNode(
+                          "text",
+                          {
+                            class: vue.normalizeClass(["iconfont", item.icon])
+                          },
+                          null,
+                          2
+                          /* CLASS */
+                        ),
+                        vue.createElementVNode(
+                          "text",
+                          null,
+                          vue.toDisplayString(item.text),
+                          1
+                          /* TEXT */
+                        )
+                      ]),
                       $setup.formData.category_id === item.value ? (vue.openBlock(), vue.createElementBlock("text", {
                         key: 0,
                         class: "iconfont icon-check"
-                      }, "✓")) : vue.createCommentVNode("v-if", true)
+                      })) : vue.createCommentVNode("v-if", true)
                     ], 10, ["onClick"]);
                   }),
                   128
@@ -10315,7 +10414,7 @@ This will fail in production.`);
                 vue.createElementVNode("text", {
                   class: "close-btn iconfont icon-close",
                   onClick: $setup.hideAccountPicker
-                }, "×")
+                })
               ]),
               vue.createElementVNode("view", { class: "picker-body" }, [
                 (vue.openBlock(true), vue.createElementBlock(
@@ -10327,17 +10426,33 @@ This will fail in production.`);
                       class: vue.normalizeClass(["picker-item", { active: $setup.formData.account_id === item.id }]),
                       onClick: ($event) => $setup.handleAccountSelect(item)
                     }, [
-                      vue.createElementVNode(
-                        "text",
-                        null,
-                        vue.toDisplayString(item.name),
-                        1
-                        /* TEXT */
-                      ),
+                      vue.createElementVNode("view", { class: "picker-item-left" }, [
+                        vue.createElementVNode(
+                          "text",
+                          {
+                            class: vue.normalizeClass(["iconfont", {
+                              "icon-cash": item.type === "现金",
+                              "icon-bank": item.type === "银行卡",
+                              "icon-alipay": item.type === "支付宝",
+                              "icon-wechat": item.type === "微信"
+                            }])
+                          },
+                          null,
+                          2
+                          /* CLASS */
+                        ),
+                        vue.createElementVNode(
+                          "text",
+                          null,
+                          vue.toDisplayString(item.name),
+                          1
+                          /* TEXT */
+                        )
+                      ]),
                       $setup.formData.account_id === item.id ? (vue.openBlock(), vue.createElementBlock("text", {
                         key: 0,
                         class: "iconfont icon-check"
-                      }, "✓")) : vue.createCommentVNode("v-if", true)
+                      })) : vue.createCommentVNode("v-if", true)
                     ], 10, ["onClick"]);
                   }),
                   128

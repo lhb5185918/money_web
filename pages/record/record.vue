@@ -1,46 +1,89 @@
 <template>
 	<view class="record-container">
-		<view class="record-form">
+		<!-- 类型切换 -->
+		<view class="type-switch">
+			<view class="switch-item" :class="{ active: formData.type === 0 }" @click="handleTypeChange({ currentIndex: 0 })">
+				<text class="iconfont icon-expense"></text>
+				<text>支出</text>
+			</view>
+			<view class="switch-item" :class="{ active: formData.type === 1 }" @click="handleTypeChange({ currentIndex: 1 })">
+				<text class="iconfont icon-income"></text>
+				<text>收入</text>
+			</view>
+		</view>
+		
+		<!-- 金额输入 -->
+		<view class="amount-input">
+			<text class="currency">￥</text>
+			<input 
+				type="digit"
+				v-model="formData.amount"
+				placeholder="请输入金额"
+				placeholder-class="placeholder"
+			/>
+		</view>
+		
+		<!-- 常用分类 -->
+		<view class="quick-categories">
+			<text class="section-title">常用分类</text>
+			<view class="category-grid">
+				<view 
+					v-for="item in quickCategories" 
+					:key="item.value"
+					class="category-item"
+					:class="{ active: formData.category_id === item.value }"
+					@click="handleQuickCategorySelect(item)"
+				>
+					<text class="iconfont" :class="item.icon"></text>
+					<text class="category-name">{{item.text}}</text>
+				</view>
+			</view>
+		</view>
+		
+		<!-- 表单区域 -->
+		<view class="form-section">
 			<uni-forms ref="form" :modelValue="formData" :rules="rules">
-				<uni-forms-item name="type">
-					<uni-segmented-control 
-						:current="formData.type" 
-						:values="['支出', '收入']"
-						@clickItem="handleTypeChange"
-					/>
-				</uni-forms-item>
-				
-				<uni-forms-item name="amount">
-					<uni-easyinput
-						v-model="formData.amount"
-						type="number"
-						placeholder="请输入金额"
-					/>
-				</uni-forms-item>
-				
 				<uni-forms-item name="category_id">
-					<view class="select-input" @click="showCategoryPicker">
-						<text class="select-value">{{formData.category_id ? categories.find(item => item.value === formData.category_id)?.text : '请选择分类'}}</text>
-						<text class="select-arrow iconfont icon-arrow-down"></text>
+					<view class="form-item" @click="showCategoryPicker">
+						<text class="label">分类</text>
+						<view class="value">
+							<text :class="{ placeholder: !formData.category_id }">
+								{{formData.category_id ? categories.find(item => item.value === formData.category_id)?.text : '请选择分类'}}
+							</text>
+							<text class="iconfont icon-arrow-right"></text>
+						</view>
 					</view>
 				</uni-forms-item>
 				
 				<uni-forms-item name="account_id">
-					<view class="select-input" @click="showAccountPicker">
-						<text class="select-value">{{formData.account_id ? accounts.find(item => item.id === formData.account_id)?.name : '请选择账户'}}</text>
-						<text class="select-arrow iconfont icon-arrow-down"></text>
+					<view class="form-item" @click="showAccountPicker">
+						<text class="label">账户</text>
+						<view class="value">
+							<text :class="{ placeholder: !formData.account_id }">
+								{{formData.account_id ? accounts.find(item => item.id === formData.account_id)?.name : '请选择账户'}}
+							</text>
+							<text class="iconfont icon-arrow-right"></text>
+						</view>
 					</view>
 				</uni-forms-item>
 				
 				<uni-forms-item name="date">
-					<uni-datetime-picker
-						v-model="formData.date"
-						type="date"
-						:clear-icon="false"
-					/>
+					<view class="form-item">
+						<text class="label">日期</text>
+						<view class="value">
+							<uni-datetime-picker
+								v-model="formData.date"
+								type="date"
+								:clear-icon="false"
+							/>
+						</view>
+					</view>
 				</uni-forms-item>
 			</uni-forms>
-			
+		</view>
+		
+		<!-- 保存按钮 -->
+		<view class="button-group">
 			<button class="save-btn" @click="handleSubmit">保存</button>
 		</view>
 		
@@ -49,7 +92,7 @@
 			<view class="picker-popup">
 				<view class="picker-header">
 					<text class="picker-title">选择分类</text>
-					<text class="close-btn iconfont icon-close" @click="hideCategoryPicker">×</text>
+					<text class="close-btn iconfont icon-close" @click="hideCategoryPicker"></text>
 				</view>
 				<view class="picker-body">
 					<view 
@@ -59,8 +102,11 @@
 						:class="{ active: formData.category_id === item.value }"
 						@click="handleCategorySelect(item)"
 					>
-						<text>{{item.text}}</text>
-						<text class="iconfont icon-check" v-if="formData.category_id === item.value">✓</text>
+						<view class="picker-item-left">
+							<text class="iconfont" :class="item.icon"></text>
+							<text>{{item.text}}</text>
+						</view>
+						<text class="iconfont icon-check" v-if="formData.category_id === item.value"></text>
 					</view>
 				</view>
 			</view>
@@ -71,7 +117,7 @@
 			<view class="picker-popup">
 				<view class="picker-header">
 					<text class="picker-title">选择账户</text>
-					<text class="close-btn iconfont icon-close" @click="hideAccountPicker">×</text>
+					<text class="close-btn iconfont icon-close" @click="hideAccountPicker"></text>
 				</view>
 				<view class="picker-body">
 					<view 
@@ -81,8 +127,16 @@
 						:class="{ active: formData.account_id === item.id }"
 						@click="handleAccountSelect(item)"
 					>
-						<text>{{item.name}}</text>
-						<text class="iconfont icon-check" v-if="formData.account_id === item.id">✓</text>
+						<view class="picker-item-left">
+							<text class="iconfont" :class="{
+								'icon-cash': item.type === '现金',
+								'icon-bank': item.type === '银行卡',
+								'icon-alipay': item.type === '支付宝',
+								'icon-wechat': item.type === '微信'
+							}"></text>
+							<text>{{item.name}}</text>
+						</view>
+						<text class="iconfont icon-check" v-if="formData.account_id === item.id"></text>
 					</view>
 				</view>
 			</view>
@@ -91,7 +145,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import request from '@/utils/request'
 
 // 表单数据
@@ -106,13 +160,24 @@ const formData = reactive({
 
 // 分类选项
 const categories = ref([
-	{ value: 1, text: '工资收入' },
-	{ value: 2, text: '购物支出' },
-	{ value: 3, text: '理财收益' },
-	{ value: 4, text: '日常开销' },
-	{ value: 5, text: '交通出行' },
-	{ value: 6, text: '餐饮美食' }
+	{ value: 1, text: '工资收入', icon: 'icon-salary' },
+	{ value: 2, text: '购物支出', icon: 'icon-shopping' },
+	{ value: 3, text: '理财收益', icon: 'icon-finance' },
+	{ value: 4, text: '日常开销', icon: 'icon-daily' },
+	{ value: 5, text: '交通出行', icon: 'icon-transport' },
+	{ value: 6, text: '餐饮美食', icon: 'icon-food' },
+	{ value: 7, text: '娱乐休闲', icon: 'icon-entertainment' },
+	{ value: 8, text: '居家生活', icon: 'icon-home' },
+	{ value: 9, text: '医疗健康', icon: 'icon-medical' },
+	{ value: 10, text: '教育培训', icon: 'icon-education' }
 ])
+
+// 常用分类
+const quickCategories = computed(() => {
+	return formData.type === 0 ? 
+		categories.value.filter(item => [2, 4, 5, 6].includes(item.value)) :
+		categories.value.filter(item => [1, 3].includes(item.value))
+})
 
 // 账户选项
 const accounts = ref([
@@ -147,6 +212,12 @@ const rules = {
 // 处理类型切换
 const handleTypeChange = (e) => {
 	formData.type = e.currentIndex
+	formData.category_id = '' // 重置分类
+}
+
+// 处理快速分类选择
+const handleQuickCategorySelect = (item) => {
+	formData.category_id = item.value
 }
 
 // 处理表单提交
@@ -231,79 +302,184 @@ const handleAccountSelect = (item) => {
 .record-container {
 	min-height: 100vh;
 	background-color: #f5f5f5;
-	padding: 30rpx;
+	padding-bottom: env(safe-area-inset-bottom);
 	
-	.record-form {
-		background-color: #fff;
-		border-radius: 20rpx;
-		padding: 40rpx 30rpx;
-		box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.05);
+	.type-switch {
+		display: flex;
+		background: #fff;
+		padding: 20rpx;
 		
-		:deep(.uni-forms-item) {
-			margin-bottom: 40rpx;
-			
-			.uni-forms-item__inner {
-				padding: 0;
-			}
-			
-			.uni-forms-item__content {
-				min-height: 80rpx;
-			}
-		}
-		
-		.select-input {
-			height: 80rpx;
-			border: 1rpx solid #ddd;
-			border-radius: 8rpx;
-			padding: 0 24rpx;
-			background-color: #fff;
+		.switch-item {
+			flex: 1;
+			height: 100rpx;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center;
+			color: #666;
 			transition: all 0.3s ease;
 			
-			&:active {
-				background-color: #f5f5f5;
+			.iconfont {
+				font-size: 48rpx;
+				margin-bottom: 8rpx;
 			}
 			
-			.select-value {
-				font-size: 30rpx;
-				color: #333;
+			text:last-child {
+				font-size: 28rpx;
 			}
 			
-			.select-arrow {
-				color: #999;
-				font-size: 24rpx;
-				transition: transform 0.3s ease;
+			&.active {
+				color: #2979ff;
+				
+				&:first-child {
+					color: #ff4d4f;
+				}
 			}
+		}
+	}
+	
+	.amount-input {
+		background: #fff;
+		padding: 40rpx 30rpx;
+		display: flex;
+		align-items: center;
+		border-top: 1rpx solid #f5f5f5;
+		
+		.currency {
+			font-size: 48rpx;
+			color: #333;
+			margin-right: 20rpx;
 		}
 		
-		:deep(.uni-easyinput__content) {
-			height: 80rpx;
-			border: 1rpx solid #ddd;
-			border-radius: 8rpx;
-			transition: border-color 0.3s ease;
-			background-color: #fff;
+		input {
+			flex: 1;
+			font-size: 48rpx;
+			color: #333;
+		}
+		
+		.placeholder {
+			color: #999;
+		}
+	}
+	
+	.quick-categories {
+		background: #fff;
+		padding: 30rpx;
+		margin-top: 20rpx;
+		
+		.section-title {
+			font-size: 28rpx;
+			color: #666;
+			margin-bottom: 20rpx;
+		}
+		
+		.category-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20rpx;
 			
-			&:focus-within {
-				border-color: #2979ff;
+			.category-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 20rpx 0;
+				border-radius: 12rpx;
+				transition: all 0.3s ease;
+				
+				.iconfont {
+					font-size: 48rpx;
+					color: #666;
+					margin-bottom: 8rpx;
+				}
+				
+				.category-name {
+					font-size: 24rpx;
+					color: #666;
+				}
+				
+				&.active {
+					background: #f0f7ff;
+					
+					.iconfont, .category-name {
+						color: #2979ff;
+					}
+					
+					&:first-child {
+						background: #fff1f0;
+						
+						.iconfont, .category-name {
+							color: #ff4d4f;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.form-section {
+		background: #fff;
+		margin-top: 20rpx;
+		padding: 0 30rpx;
+		
+		.form-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 100rpx;
+			border-bottom: 1rpx solid #f5f5f5;
+			
+			&:last-child {
+				border-bottom: none;
 			}
 			
-			.uni-easyinput__content-input {
+			.label {
 				font-size: 30rpx;
 				color: #333;
 			}
+			
+			.value {
+				display: flex;
+				align-items: center;
+				
+				text {
+					font-size: 30rpx;
+					color: #333;
+					
+					&.placeholder {
+						color: #999;
+					}
+				}
+				
+				.iconfont {
+					font-size: 32rpx;
+					color: #999;
+					margin-left: 10rpx;
+				}
+				
+				:deep(.uni-date) {
+					.uni-date-editor {
+						border: none;
+						
+						.uni-date-editor--x {
+							padding: 0;
+						}
+					}
+				}
+			}
 		}
+	}
+	
+	.button-group {
+		padding: 40rpx 30rpx;
 		
 		.save-btn {
 			width: 100%;
-			height: 80rpx;
-			line-height: 80rpx;
+			height: 90rpx;
+			line-height: 90rpx;
 			background: #2979ff;
 			color: #fff;
 			font-size: 32rpx;
-			border-radius: 8rpx;
-			margin-top: 60rpx;
+			border-radius: 45rpx;
 			transition: opacity 0.3s ease;
 			
 			&:active {
@@ -352,27 +528,45 @@ const handleAccountSelect = (item) => {
 		
 		.picker-item {
 			padding: 30rpx;
-			font-size: 30rpx;
-			color: #333;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			border-bottom: 1rpx solid #f5f5f5;
+			
+			.picker-item-left {
+				display: flex;
+				align-items: center;
+				
+				.iconfont {
+					font-size: 40rpx;
+					color: #666;
+					margin-right: 20rpx;
+				}
+				
+				text {
+					font-size: 30rpx;
+					color: #333;
+				}
+			}
 			
 			&:active {
 				background-color: #f5f5f5;
 			}
 			
 			&.active {
-				color: #2979ff;
+				.picker-item-left {
+					.iconfont, text {
+						color: #2979ff;
+					}
+				}
 				
-				.iconfont {
+				.icon-check {
 					color: #2979ff;
 					visibility: visible;
 				}
 			}
 			
-			.iconfont {
+			.icon-check {
 				visibility: hidden;
 				font-size: 40rpx;
 			}
@@ -385,37 +579,77 @@ const handleAccountSelect = (item) => {
 	.record-container {
 		background-color: #1a1a1a;
 		
-		.record-form {
-			background-color: #2c2c2c;
-			box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.2);
+		.type-switch {
+			background: #2c2c2c;
 			
-			.select-input {
-				background-color: #1a1a1a;
-				border-color: #333;
-				
-				.select-value {
-					color: #fff;
-				}
-				
-				.select-arrow {
-					color: #666;
-				}
-				
-				&:active {
-					background-color: #333;
-				}
+			.switch-item {
+				color: #999;
+			}
+		}
+		
+		.amount-input {
+			background: #2c2c2c;
+			border-top-color: #333;
+			
+			.currency {
+				color: #fff;
 			}
 			
-			:deep(.uni-easyinput__content) {
-				background-color: #1a1a1a;
-				border-color: #333;
+			input {
+				color: #fff;
+			}
+			
+			.placeholder {
+				color: #666;
+			}
+		}
+		
+		.quick-categories {
+			background: #2c2c2c;
+			
+			.section-title {
+				color: #999;
+			}
+			
+			.category-grid {
+				.category-item {
+					.iconfont {
+						color: #999;
+					}
+					
+					.category-name {
+						color: #999;
+					}
+					
+					&.active {
+						background: #1a1a1a;
+					}
+				}
+			}
+		}
+		
+		.form-section {
+			background: #2c2c2c;
+			
+			.form-item {
+				border-bottom-color: #333;
 				
-				.uni-easyinput__content-input {
+				.label {
 					color: #fff;
 				}
 				
-				&:focus-within {
-					border-color: #2979ff;
+				.value {
+					text {
+						color: #fff;
+						
+						&.placeholder {
+							color: #666;
+						}
+					}
+					
+					.iconfont {
+						color: #666;
+					}
 				}
 			}
 		}
@@ -438,8 +672,17 @@ const handleAccountSelect = (item) => {
 		
 		.picker-body {
 			.picker-item {
-				color: #fff;
 				border-bottom-color: #333;
+				
+				.picker-item-left {
+					.iconfont {
+						color: #999;
+					}
+					
+					text {
+						color: #fff;
+					}
+				}
 				
 				&:active {
 					background-color: #333;
