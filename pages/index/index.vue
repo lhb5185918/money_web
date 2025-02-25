@@ -161,25 +161,37 @@ onMounted(() => {
 // 刷新数据
 const refreshData = async () => {
 	try {
-		// 获取账户列表
-		const accountsRes = await request.get('/api/accounts')
-		if (accountsRes.data) {
-			accounts.value = accountsRes.data
-		}
+		// const token = uni.getStorageSync('token')
+		// const headers = {
+		// 	'Authorization': token
+		// }
 		
-		// 获取最近交易
-		const transactionsRes = await request.get('/api/transactions/recent')
-		if (transactionsRes.data) {
-			recentTransactions.value = transactionsRes.data
-		}
+		// // 获取账户列表
+		// const accountsRes = await request.get('/api/accounts', {
+		// 	header: headers
+		// })
+		// if (accountsRes.data) {
+		// 	accounts.value = accountsRes.data
+		// }
 		
-		// 获取资产统计
-		const statsRes = await request.get('/api/statistics/overview')
-		if (statsRes.data) {
-			totalAssets.value = statsRes.data.totalAssets
-			monthlyIncome.value = statsRes.data.monthlyIncome
-			monthlyExpense.value = statsRes.data.monthlyExpense
-		}
+		// // 获取最近交易
+		// const transactionsRes = await request.get('/api/transactions/recent', {
+		// 	header: headers
+		// })
+		// if (transactionsRes.data) {
+		// 	recentTransactions.value = transactionsRes.data
+		// }
+		
+		// // 获取资产统计
+		// const statsRes = await request.get('/api/statistics/overview', {
+		// 	header: headers
+		// })
+		// if (statsRes.data) {
+		// 	totalAssets.value = statsRes.data.totalAssets
+		// 	monthlyIncome.value = statsRes.data.monthlyIncome
+		// 	monthlyExpense.value = statsRes.data.monthlyExpense
+		// }
+		
 	} catch (error) {
 		uni.showToast({
 			title: error.message || '获取数据失败',

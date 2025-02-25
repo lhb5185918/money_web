@@ -1,88 +1,86 @@
 import { useUserStore } from '@/stores/user'
 
-// 基础配置
-const baseConfig = {
-	baseUrl: 'http://localhost:5000',  // 直接指定后端服务器地址
-	timeout: 10000
-}
+const baseURL = 'http://localhost:5000'
 
-// 创建请求对象
 const request = {
-	get: (url, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: 'GET' }),
-	post: (url, data, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: 'POST', data }),
-	put: (url, data, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: 'PUT', data }),
-	delete: (url, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: 'DELETE' })
+	get: (url, options = {}) => sendRequest({ url, method: 'GET', ...options }),
+	post: (url, data, options = {}) => sendRequest({ url, method: 'POST', data, ...options }),
+	put: (url, data, options = {}) => sendRequest({ url, method: 'PUT', data, ...options }),
+	delete: (url, options = {}) => sendRequest({ url, method: 'DELETE', ...options })
 }
 
-// 发送请求
-const sendRequest = (config) => {
+const sendRequest = (options) => {
 	return new Promise((resolve, reject) => {
+		// 使用 pinia store 获取 token，而不是直接从storage获取
 		const userStore = useUserStore()
 		const token = userStore.token
 		
-		// 合并配置
-		const finalConfig = {
-			...baseConfig,
-			...config,
-			header: {
-				'Content-Type': 'application/json',
-				...config.header
+		console.log('【Request】开始发送请求:', options.url)
+		console.log('【Request】当前token:', token)
+		console.log('【Request】当前页面栈:', getCurrentPages().map(page => page.route))
+		
+		// 判断是否是认证相关的请求（登录或注册）
+		const isAuthRequest = options.url.includes('/auth/')
+		console.log('【Request】是否是认证请求:', isAuthRequest)
+		
+		// 如果不是认证请求，且没有token，则跳转到登录页
+		if (!isAuthRequest && !token) {
+			console.log('【Request】未登录状态，token不存在')
+			uni.showToast({
+				title: '请先登录',
+				icon: 'none'
+			})
+			
+			// 获取当前页面栈
+			const pages = getCurrentPages()
+			// 如果当前不在登录页，才跳转
+			if (pages.length > 0 && !pages[pages.length - 1].route.includes('login')) {
+				console.log('【Request】准备跳转到登录页')
+				uni.reLaunch({
+					url: '/pages/login/login'
+				})
 			}
+			reject(new Error('请先登录'))
+			return
 		}
 		
-		// 添加token
-		if (token && !config.skipAuth) {
-			finalConfig.header.Authorization = `Bearer ${token}`
+		// 合并请求头
+		const header = {
+			'Content-Type': 'application/json',
+			...options.header
 		}
+		
+		// 如果有token且不是认证请求，添加到请求头
+		if (token && !isAuthRequest) {
+			header.Authorization = token
+		}
+		console.log('【Request】最终请求头:', header)
 		
 		uni.request({
-			...finalConfig,
-			success: async (response) => {
-				const { statusCode, data } = response
-				
-				// 处理业务错误
-				if (statusCode >= 200 && statusCode < 300) {
-					resolve(response)
-				} else if (statusCode === 401) {
-					// token过期，尝试刷新
-					try {
-						await handleTokenExpired()
-						// 重新发送请求
-						const newResponse = await sendRequest(config)
-						resolve(newResponse)
-					} catch (error) {
-						reject(error)
-					}
+			url: baseURL + options.url,
+			method: options.method,
+			data: options.data,
+			header,
+			success: (res) => {
+				console.log('【Request】请求响应:', res)
+				if (res.statusCode === 200) {
+					resolve(res)
+				} else if (res.statusCode === 401) {
+					console.log('【Request】token过期，需要重新登录')
+					// token过期，使用store的logout方法处理
+					userStore.logout()
+					reject(new Error('登录已过期'))
 				} else {
-					reject({
-						message: data.message || '请求失败',
-						response
-					})
+					console.log('【Request】请求失败:', res.data)
+					reject(res.data)
 				}
 			},
-			fail: (error) => {
-				reject({
-					message: '网络请求失败',
-					error
-				})
+			fail: (err) => {
+				console.log('【Request】请求错误:', err)
+				reject(err)
 			}
 		})
 	})
-}
-
-// 处理token过期
-const handleTokenExpired = async () => {
-	const userStore = useUserStore()
-	
-	try {
-		// 刷新token
-		await userStore.refreshAccessToken()
-		return true
-	} catch (error) {
-		// 刷新失败，退出登录
-		userStore.logout()
-		throw new Error('登录已过期，请重新登录')
-	}
 }
 
 export default request 

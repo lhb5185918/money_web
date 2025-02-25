@@ -3,7 +3,7 @@
 		<!-- 顶部导航 -->
 		<view class="nav-bar">
 			<text class="iconfont icon-back" @click="uni.navigateBack()"></text>
-			<text class="title">记账</text>
+			<text class="title">记一笔</text>
 		</view>
 		
 		<!-- 类型切换 -->
@@ -17,19 +17,20 @@
 		</view>
 		
 		<!-- 金额输入 -->
-		<view class="amount-input">
-			<text class="currency">￥</text>
-			<input 
-				type="digit"
-				v-model="formData.amount"
-				placeholder="请输入金额"
-				placeholder-class="placeholder"
-			/>
+		<view class="amount-card">
+			<view class="amount-input">
+				<text class="currency">￥</text>
+				<input 
+					type="digit"
+					v-model="formData.amount"
+					placeholder="0.00"
+					placeholder-class="placeholder"
+				/>
+			</view>
 		</view>
 		
 		<!-- 常用分类 -->
 		<view class="quick-categories">
-			<text class="section-title">常用分类</text>
 			<view class="category-grid">
 				<view 
 					v-for="item in quickCategories" 
@@ -38,7 +39,7 @@
 					:class="{ active: formData.category_id === item.value }"
 					@click="handleQuickCategorySelect(item)"
 				>
-					<view class="icon-wrapper">
+					<view class="icon-wrapper" :class="item.icon">
 						<text class="iconfont" :class="item.icon"></text>
 					</view>
 					<text class="category-name">{{item.text}}</text>
@@ -51,7 +52,10 @@
 			<uni-forms ref="form" :modelValue="formData" :rules="rules">
 				<uni-forms-item name="category_id">
 					<view class="form-item" @click="showCategoryPicker">
-						<text class="label">分类</text>
+						<view class="label-wrapper">
+							<text class="iconfont icon-category"></text>
+							<text class="label">分类</text>
+						</view>
 						<view class="value">
 							<text :class="{ placeholder: !formData.category_id }">
 								{{formData.category_id ? categories.find(item => item.value === formData.category_id)?.text : '请选择分类'}}
@@ -63,7 +67,10 @@
 				
 				<uni-forms-item name="account_id">
 					<view class="form-item" @click="showAccountPicker">
-						<text class="label">账户</text>
+						<view class="label-wrapper">
+							<text class="iconfont icon-wallet"></text>
+							<text class="label">账户</text>
+						</view>
 						<view class="value">
 							<text :class="{ placeholder: !formData.account_id }">
 								{{formData.account_id ? accounts.find(item => item.id === formData.account_id)?.name : '请选择账户'}}
@@ -75,7 +82,10 @@
 				
 				<uni-forms-item name="date">
 					<view class="form-item">
-						<text class="label">日期</text>
+						<view class="label-wrapper">
+							<text class="iconfont icon-calendar"></text>
+							<text class="label">日期</text>
+						</view>
 						<view class="value">
 							<uni-datetime-picker
 								v-model="formData.date"
@@ -109,7 +119,9 @@
 						@click="handleCategorySelect(item)"
 					>
 						<view class="picker-item-left">
-							<text class="iconfont" :class="item.icon"></text>
+							<view class="picker-icon-wrapper">
+								<text class="iconfont" :class="item.icon"></text>
+							</view>
 							<text>{{item.text}}</text>
 						</view>
 						<text class="iconfont icon-check" v-if="formData.category_id === item.value"></text>
@@ -134,12 +146,14 @@
 						@click="handleAccountSelect(item)"
 					>
 						<view class="picker-item-left">
-							<text class="iconfont" :class="{
-								'icon-cash': item.type === '现金',
-								'icon-bank': item.type === '银行卡',
-								'icon-alipay': item.type === '支付宝',
-								'icon-wechat': item.type === '微信'
-							}"></text>
+							<view class="picker-icon-wrapper">
+								<text class="iconfont" :class="{
+									'icon-cash': item.type === '现金',
+									'icon-bank': item.type === '银行卡',
+									'icon-alipay': item.type === '支付宝',
+									'icon-wechat': item.type === '微信'
+								}"></text>
+							</view>
 							<text>{{item.name}}</text>
 						</view>
 						<text class="iconfont icon-check" v-if="formData.account_id === item.id"></text>
@@ -151,7 +165,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, onMounted } from 'vue'
 import request from '@/utils/request'
 
 // 表单数据
@@ -185,13 +199,55 @@ const quickCategories = computed(() => {
 		categories.value.filter(item => [1, 3].includes(item.value))
 })
 
-// 账户选项
-const accounts = ref([
-	{ id: 1, name: '现金账户', balance: '28,500.00', type: '现金' },
-	{ id: 2, name: '工商银行', balance: '50,000.00', type: '银行卡' },
-	{ id: 3, name: '支付宝', balance: '30,000.00', type: '支付宝' },
-	{ id: 4, name: '微信钱包', balance: '20,000.00', type: '微信' }
-])
+// 账户列表
+const accounts = ref([])
+const isLoading = ref(false)
+
+// 获取账户列表
+const refreshAccounts = async () => {
+	if (isLoading.value) return
+	
+	try {
+		isLoading.value = true
+		const token = uni.getStorageSync('token')
+		const res = await request.get('/api/assets/accounts', {
+			header: {
+				'Authorization': token
+			}
+		})
+		if (res.data) {
+			accounts.value = res.data
+		}
+	} catch (error) {
+		// 处理token过期的情况
+		if (error.statusCode === 401) {
+			uni.showToast({
+				title: '登录已过期，请重新登录',
+				icon: 'none'
+			})
+			// 清除token
+			uni.removeStorageSync('token')
+			// 延迟跳转到登录页
+			setTimeout(() => {
+				uni.redirectTo({
+					url: '/pages/login/login'
+				})
+			}, 1500)
+			return
+		}
+		uni.showToast({
+			title: error.message || '获取数据失败',
+			icon: 'none'
+		})
+	} finally {
+		isLoading.value = false
+	}
+}
+
+// 初始化
+onMounted(() => {
+	refreshAccounts()
+})
 
 // 表单验证规则
 const rules = {
@@ -234,12 +290,17 @@ const handleSubmit = async () => {
 		if (!valid) return
 		
 		// 发送记账请求
+		const token = uni.getStorageSync('token')
 		const result = await request.post('/api/transactions', {
 			type: formData.type,
 			amount: parseFloat(formData.amount),
 			category_id: formData.category_id,
 			account_id: formData.account_id,
 			date: formData.date
+		}, {
+			header: {
+				'Authorization': token
+			}
 		})
 		
 		if (result.data) {
@@ -262,6 +323,22 @@ const handleSubmit = async () => {
 			}, 1500)
 		}
 	} catch (error) {
+		// 处理token过期的情况
+		if (error.statusCode === 401) {
+			uni.showToast({
+				title: '登录已过期，请重新登录',
+				icon: 'none'
+			})
+			// 清除token
+			uni.removeStorageSync('token')
+			// 延迟跳转到登录页
+			setTimeout(() => {
+				uni.redirectTo({
+					url: '/pages/login/login'
+				})
+			}, 1500)
+			return
+		}
 		uni.showToast({
 			title: error.message || '操作失败',
 			icon: 'none'
@@ -317,7 +394,7 @@ const handleAccountSelect = (item) => {
 		background: transparent;
 		
 		.icon-back {
-			font-size: 40rpx;
+			font-size: 44rpx;
 			color: #333;
 			padding: 10rpx;
 		}
@@ -325,28 +402,29 @@ const handleAccountSelect = (item) => {
 		.title {
 			flex: 1;
 			text-align: center;
-			font-size: 36rpx;
-			font-weight: 500;
+			font-size: 38rpx;
+			font-weight: 600;
 			color: #333;
-			margin-right: 50rpx; // 补偿返回按钮的宽度,使标题居中
+			margin-right: 54rpx;
 		}
 	}
 	
 	.type-switch {
 		display: flex;
-		background: rgba(255, 255, 255, 0.9);
-		margin: 20rpx 30rpx;
-		border-radius: 16rpx;
-		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+		background: rgba(255, 255, 255, 0.95);
+		margin: 20rpx 30rpx 40rpx;
+		border-radius: 20rpx;
+		box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.05);
 		overflow: hidden;
 		
 		.switch-item {
 			flex: 1;
-			height: 100rpx;
+			height: 110rpx;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			position: relative;
+			transition: all 0.3s ease;
 			
 			&.active {
 				background: #fff;
@@ -356,6 +434,7 @@ const handleAccountSelect = (item) => {
 					-webkit-background-clip: text;
 					color: transparent;
 					font-weight: bold;
+					font-size: 36rpx;
 				}
 				
 				&:last-child .type-text.income {
@@ -363,6 +442,7 @@ const handleAccountSelect = (item) => {
 					-webkit-background-clip: text;
 					color: transparent;
 					font-weight: bold;
+					font-size: 36rpx;
 				}
 				
 				&::after {
@@ -371,74 +451,71 @@ const handleAccountSelect = (item) => {
 					bottom: 0;
 					left: 25%;
 					width: 50%;
-					height: 4rpx;
-					border-radius: 2rpx;
+					height: 6rpx;
+					border-radius: 3rpx;
 					background: currentColor;
 				}
 			}
 			
 			.type-text {
-				font-size: 32rpx;
+				font-size: 34rpx;
 				font-weight: 500;
+				transition: all 0.3s ease;
 				
 				&.expense {
-					color: #666;
+					color: #999;
 				}
 				
 				&.income {
-					color: #666;
+					color: #999;
 				}
 			}
 		}
 	}
 	
-	.amount-input {
-		background: rgba(255, 255, 255, 0.9);
-		margin: 20rpx 30rpx;
-		padding: 40rpx 30rpx;
-		border-radius: 16rpx;
-		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
-		display: flex;
-		align-items: center;
+	.amount-card {
+		margin: 0 30rpx 40rpx;
+		padding: 40rpx;
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20rpx;
+		box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.05);
 		
-		.currency {
-			font-size: 48rpx;
-			color: #333;
-			margin-right: 20rpx;
-			font-weight: 500;
-		}
-		
-		input {
-			flex: 1;
-			font-size: 48rpx;
-			color: #333;
-			font-weight: 500;
-		}
-		
-		.placeholder {
-			color: #999;
-			font-weight: normal;
+		.amount-input {
+			display: flex;
+			align-items: center;
+			
+			.currency {
+				font-size: 60rpx;
+				color: #333;
+				margin-right: 20rpx;
+				font-weight: 500;
+			}
+			
+			input {
+				flex: 1;
+				font-size: 60rpx;
+				color: #333;
+				font-weight: 500;
+			}
+			
+			.placeholder {
+				color: #999;
+				font-weight: normal;
+			}
 		}
 	}
 	
 	.quick-categories {
-		background: rgba(255, 255, 255, 0.9);
-		margin: 20rpx 30rpx;
+		margin: 0 30rpx 40rpx;
 		padding: 30rpx;
-		border-radius: 16rpx;
-		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
-		
-		.section-title {
-			font-size: 28rpx;
-			color: #666;
-			margin-bottom: 30rpx;
-			font-weight: 500;
-		}
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20rpx;
+		box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.05);
 		
 		.category-grid {
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
-			gap: 30rpx;
+			gap: 40rpx 30rpx;
 			
 			.category-item {
 				display: flex;
@@ -448,51 +525,147 @@ const handleAccountSelect = (item) => {
 				.icon-wrapper {
 					width: 100rpx;
 					height: 100rpx;
-					border-radius: 50%;
-					background: #f5f5f5;
+					border-radius: 30rpx;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					margin-bottom: 16rpx;
 					transition: all 0.3s ease;
+					position: relative;
+					overflow: hidden;
+					
+					&::before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+						border-radius: 30rpx;
+					}
 					
 					.iconfont {
 						font-size: 48rpx;
-						color: #666;
+						transition: all 0.3s ease;
+						z-index: 1;
+						
+						&.icon-shopping {
+							color: #ff4d4f;
+						}
+						
+						&.icon-daily {
+							color: #52c41a;
+						}
+						
+						&.icon-transport {
+							color: #1890ff;
+						}
+						
+						&.icon-food {
+							color: #fa8c16;
+						}
+						
+						&.icon-salary {
+							color: #722ed1;
+						}
+						
+						&.icon-finance {
+							color: #13c2c2;
+						}
+					}
+					
+					// 为不同类型添加背景色
+					&.icon-shopping {
+						background: #fff1f0;
+					}
+					
+					&.icon-daily {
+						background: #f6ffed;
+					}
+					
+					&.icon-transport {
+						background: #e6f7ff;
+					}
+					
+					&.icon-food {
+						background: #fff7e6;
+					}
+					
+					&.icon-salary {
+						background: #f9f0ff;
+					}
+					
+					&.icon-finance {
+						background: #e6fffb;
 					}
 				}
 				
 				.category-name {
-					font-size: 24rpx;
+					font-size: 26rpx;
 					color: #666;
+					transition: all 0.3s ease;
 				}
 				
 				&.active {
 					.icon-wrapper {
-						background: #e6f0ff;
 						transform: scale(1.05);
+						box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.1);
 						
-						.iconfont {
-							color: #2979ff;
+						&::before {
+							background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+						}
+						
+						&.icon-shopping {
+							background: #ffccc7;
+						}
+						
+						&.icon-daily {
+							background: #b7eb8f;
+						}
+						
+						&.icon-transport {
+							background: #91caff;
+						}
+						
+						&.icon-food {
+							background: #ffd591;
+						}
+						
+						&.icon-salary {
+							background: #d3adf7;
+						}
+						
+						&.icon-finance {
+							background: #87e8de;
 						}
 					}
 					
 					.category-name {
-						color: #2979ff;
 						font-weight: 500;
-					}
-					
-					&:first-child {
-						.icon-wrapper {
-							background: #fff1f0;
-							
-							.iconfont {
-								color: #ff4d4f;
-							}
+						
+						&.icon-shopping {
+							color: #ff4d4f;
 						}
 						
-						.category-name {
-							color: #ff4d4f;
+						&.icon-daily {
+							color: #52c41a;
+						}
+						
+						&.icon-transport {
+							color: #1890ff;
+						}
+						
+						&.icon-food {
+							color: #fa8c16;
+						}
+						
+						&.icon-salary {
+							color: #722ed1;
+						}
+						
+						&.icon-finance {
+							color: #13c2c2;
 						}
 					}
 				}
@@ -501,27 +674,38 @@ const handleAccountSelect = (item) => {
 	}
 	
 	.form-section {
-		background: rgba(255, 255, 255, 0.9);
-		margin: 20rpx 30rpx;
-		padding: 0 30rpx;
-		border-radius: 16rpx;
-		box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+		margin: 0 30rpx;
+		padding: 10rpx 30rpx;
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20rpx;
+		box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.05);
 		
 		.form-item {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			height: 100rpx;
+			height: 110rpx;
 			border-bottom: 1rpx solid rgba(0, 0, 0, 0.05);
 			
 			&:last-child {
 				border-bottom: none;
 			}
 			
-			.label {
-				font-size: 30rpx;
-				color: #333;
-				font-weight: 500;
+			.label-wrapper {
+				display: flex;
+				align-items: center;
+				
+				.iconfont {
+					font-size: 40rpx;
+					color: #666;
+					margin-right: 16rpx;
+				}
+				
+				.label {
+					font-size: 30rpx;
+					color: #333;
+					font-weight: 500;
+				}
 			}
 			
 			.value {
@@ -542,28 +726,38 @@ const handleAccountSelect = (item) => {
 					color: #999;
 					margin-left: 10rpx;
 				}
+				
+				:deep(.uni-date) {
+					.uni-date-editor {
+						border: none;
+						
+						.uni-date-editor--x {
+							padding: 0;
+						}
+					}
+				}
 			}
 		}
 	}
 	
 	.button-group {
-		padding: 40rpx 30rpx;
+		padding: 60rpx 30rpx;
 		
 		.save-btn {
 			width: 100%;
-			height: 90rpx;
-			line-height: 90rpx;
+			height: 100rpx;
+			line-height: 100rpx;
 			background: linear-gradient(135deg, #2979ff, #1565c0);
 			color: #fff;
-			font-size: 32rpx;
-			font-weight: 500;
-			border-radius: 45rpx;
+			font-size: 34rpx;
+			font-weight: 600;
+			border-radius: 50rpx;
 			transition: all 0.3s ease;
-			box-shadow: 0 4rpx 16rpx rgba(41, 121, 255, 0.2);
+			box-shadow: 0 8rpx 32rpx rgba(41, 121, 255, 0.25);
 			
 			&:active {
 				transform: scale(0.98);
-				box-shadow: 0 2rpx 8rpx rgba(41, 121, 255, 0.2);
+				box-shadow: 0 4rpx 16rpx rgba(41, 121, 255, 0.2);
 			}
 			
 			&::after {
@@ -575,7 +769,7 @@ const handleAccountSelect = (item) => {
 
 .picker-popup {
 	background-color: #fff;
-	border-radius: 20rpx 20rpx 0 0;
+	border-radius: 30rpx 30rpx 0 0;
 	overflow: hidden;
 	
 	.picker-header {
@@ -586,8 +780,8 @@ const handleAccountSelect = (item) => {
 		border-bottom: 1rpx solid #f5f5f5;
 		
 		.picker-title {
-			font-size: 32rpx;
-			font-weight: bold;
+			font-size: 34rpx;
+			font-weight: 600;
 			color: #333;
 		}
 		
@@ -605,38 +799,57 @@ const handleAccountSelect = (item) => {
 	.picker-body {
 		max-height: 60vh;
 		overflow-y: auto;
+		padding: 20rpx 0;
 		
 		.picker-item {
 			padding: 30rpx;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			border-bottom: 1rpx solid #f5f5f5;
 			
 			.picker-item-left {
 				display: flex;
 				align-items: center;
 				
-				.iconfont {
-					font-size: 40rpx;
-					color: #666;
+				.picker-icon-wrapper {
+					width: 80rpx;
+					height: 80rpx;
+					border-radius: 24rpx;
+					background: #f7f7f7;
+					display: flex;
+					align-items: center;
+					justify-content: center;
 					margin-right: 20rpx;
+					
+					.iconfont {
+						font-size: 40rpx;
+						color: #666;
+					}
 				}
 				
 				text {
-					font-size: 30rpx;
+					font-size: 32rpx;
 					color: #333;
 				}
 			}
 			
 			&:active {
-				background-color: #f5f5f5;
+				background-color: #f9f9f9;
 			}
 			
 			&.active {
 				.picker-item-left {
-					.iconfont, text {
+					.picker-icon-wrapper {
+						background: #e6f0ff;
+						
+						.iconfont {
+							color: #2979ff;
+						}
+					}
+					
+					text {
 						color: #2979ff;
+						font-weight: 500;
 					}
 				}
 				
@@ -648,7 +861,7 @@ const handleAccountSelect = (item) => {
 			
 			.icon-check {
 				visibility: hidden;
-				font-size: 40rpx;
+				font-size: 44rpx;
 			}
 		}
 	}
@@ -670,8 +883,8 @@ const handleAccountSelect = (item) => {
 		}
 		
 		.type-switch {
-			background: rgba(44, 44, 44, 0.9);
-			box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.2);
+			background: rgba(44, 44, 44, 0.95);
+			box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.2);
 			
 			.switch-item {
 				&.active {
@@ -686,33 +899,35 @@ const handleAccountSelect = (item) => {
 			}
 		}
 		
-		.amount-input, .quick-categories, .form-section {
-			background: rgba(44, 44, 44, 0.9);
-			box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.2);
+		.amount-card, .quick-categories, .form-section {
+			background: rgba(44, 44, 44, 0.95);
+			box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.2);
 		}
 		
-		.amount-input {
-			.currency, input {
-				color: #fff;
-			}
-			
-			.placeholder {
-				color: #666;
+		.amount-card {
+			.amount-input {
+				.currency, input {
+					color: #fff;
+				}
+				
+				.placeholder {
+					color: #666;
+				}
 			}
 		}
 		
 		.quick-categories {
-			.section-title {
-				color: #999;
-			}
-			
 			.category-grid {
 				.category-item {
 					.icon-wrapper {
-						background: #333;
+						background: rgba(255, 255, 255, 0.05);
+						
+						&::before {
+							background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+						}
 						
 						.iconfont {
-							color: #999;
+							opacity: 0.8;
 						}
 					}
 					
@@ -722,7 +937,11 @@ const handleAccountSelect = (item) => {
 					
 					&.active {
 						.icon-wrapper {
-							background: #1a1a1a;
+							background: rgba(255, 255, 255, 0.1);
+							
+							&::before {
+								background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+							}
 						}
 					}
 				}
@@ -733,8 +952,14 @@ const handleAccountSelect = (item) => {
 			.form-item {
 				border-bottom-color: rgba(255, 255, 255, 0.1);
 				
-				.label {
-					color: #fff;
+				.label-wrapper {
+					.iconfont {
+						color: #999;
+					}
+					
+					.label {
+						color: #fff;
+					}
 				}
 				
 				.value {
@@ -752,10 +977,10 @@ const handleAccountSelect = (item) => {
 		.button-group {
 			.save-btn {
 				background: linear-gradient(135deg, #1565c0, #0d47a1);
-				box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.3);
+				box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.3);
 				
 				&:active {
-					box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.3);
+					box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.3);
 				}
 			}
 		}
@@ -778,11 +1003,13 @@ const handleAccountSelect = (item) => {
 		
 		.picker-body {
 			.picker-item {
-				border-bottom-color: #333;
-				
 				.picker-item-left {
-					.iconfont {
-						color: #999;
+					.picker-icon-wrapper {
+						background: rgba(255, 255, 255, 0.05);
+						
+						.iconfont {
+							opacity: 0.8;
+						}
 					}
 					
 					text {
@@ -792,6 +1019,14 @@ const handleAccountSelect = (item) => {
 				
 				&:active {
 					background-color: #333;
+				}
+				
+				&.active {
+					.picker-item-left {
+						.picker-icon-wrapper {
+							background: rgba(255, 255, 255, 0.1);
+						}
+					}
 				}
 			}
 		}

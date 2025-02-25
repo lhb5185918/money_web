@@ -688,7 +688,7 @@ if (uni.restoreGlobal) {
     const reg = /^[0-9]*$/g;
     return typeof val === "number" || reg.test(val) ? val + "px" : val;
   };
-  const _sfc_main$j = {
+  const _sfc_main$f = {
     name: "UniIcons",
     emits: ["click"],
     props: {
@@ -742,7 +742,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -757,7 +757,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$i], ["__scopeId", "data-v-946bce22"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-946bce22"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons.vue"]]);
   const ON_SHOW = "onShow";
   const ON_HIDE = "onHide";
   const ON_LAUNCH = "onLaunch";
@@ -795,7 +795,7 @@ if (uni.restoreGlobal) {
     }
     return style;
   }
-  const _sfc_main$i = {
+  const _sfc_main$e = {
     name: "uni-easyinput",
     emits: [
       "click",
@@ -1152,8 +1152,8 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$3);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -1277,8 +1277,8 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-f7a14e66"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-easyinput/uni-easyinput.vue"]]);
-  const _sfc_main$h = {
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-f7a14e66"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-easyinput/uni-easyinput.vue"]]);
+  const _sfc_main$d = {
     name: "uniFormsItem",
     options: {
       virtualHost: true
@@ -1610,7 +1610,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -1666,7 +1666,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-3515f8e1"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms-item/uni-forms-item.vue"]]);
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-3515f8e1"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms-item/uni-forms-item.vue"]]);
   var pattern = {
     email: /^\S+?@\S+?\.\S+?$/,
     idcard: /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/,
@@ -2230,7 +2230,7 @@ if (uni.restoreGlobal) {
       return false;
     }
   };
-  const _sfc_main$g = {
+  const _sfc_main$c = {
     name: "uniForms",
     emits: ["validate", "submit"],
     options: {
@@ -2532,14 +2532,14 @@ if (uni.restoreGlobal) {
       _isEqual: isEqual
     }
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-forms" }, [
       vue.createElementVNode("form", null, [
         vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ])
     ]);
   }
-  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-13523fe0"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms/uni-forms.vue"]]);
+  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-13523fe0"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-forms/uni-forms.vue"]]);
   var isVue2 = false;
   function set(target, key, val) {
     if (Array.isArray(target)) {
@@ -3982,87 +3982,89 @@ This will fail in production.`);
     useStore.$id = id;
     return useStore;
   }
-  const baseConfig = {
-    baseUrl: "http://localhost:5000",
-    // 直接指定后端服务器地址
-    timeout: 1e4
-  };
+  const baseURL = "http://localhost:5000";
   const request = {
-    get: (url, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: "GET" }),
-    post: (url, data, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: "POST", data }),
-    put: (url, data, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: "PUT", data }),
-    delete: (url, config = {}) => sendRequest({ ...config, url: baseConfig.baseUrl + url, method: "DELETE" })
+    get: (url, options = {}) => sendRequest({ url, method: "GET", ...options }),
+    post: (url, data, options = {}) => sendRequest({ url, method: "POST", data, ...options }),
+    put: (url, data, options = {}) => sendRequest({ url, method: "PUT", data, ...options }),
+    delete: (url, options = {}) => sendRequest({ url, method: "DELETE", ...options })
   };
-  const sendRequest = (config) => {
+  const sendRequest = (options) => {
     return new Promise((resolve, reject) => {
       const userStore = useUserStore();
       const token = userStore.token;
-      const finalConfig = {
-        ...baseConfig,
-        ...config,
-        header: {
-          "Content-Type": "application/json",
-          ...config.header
+      formatAppLog("log", "at utils/request.js:18", "【Request】开始发送请求:", options.url);
+      formatAppLog("log", "at utils/request.js:19", "【Request】当前token:", token);
+      formatAppLog("log", "at utils/request.js:20", "【Request】当前页面栈:", getCurrentPages().map((page) => page.route));
+      const isAuthRequest = options.url.includes("/auth/");
+      formatAppLog("log", "at utils/request.js:24", "【Request】是否是认证请求:", isAuthRequest);
+      if (!isAuthRequest && !token) {
+        formatAppLog("log", "at utils/request.js:28", "【Request】未登录状态，token不存在");
+        uni.showToast({
+          title: "请先登录",
+          icon: "none"
+        });
+        const pages = getCurrentPages();
+        if (pages.length > 0 && !pages[pages.length - 1].route.includes("login")) {
+          formatAppLog("log", "at utils/request.js:38", "【Request】准备跳转到登录页");
+          uni.reLaunch({
+            url: "/pages/login/login"
+          });
         }
-      };
-      if (token && !config.skipAuth) {
-        finalConfig.header.Authorization = `Bearer ${token}`;
+        reject(new Error("请先登录"));
+        return;
       }
+      const header = {
+        "Content-Type": "application/json",
+        ...options.header
+      };
+      if (token && !isAuthRequest) {
+        header.Authorization = token;
+      }
+      formatAppLog("log", "at utils/request.js:57", "【Request】最终请求头:", header);
       uni.request({
-        ...finalConfig,
-        success: async (response) => {
-          const { statusCode, data } = response;
-          if (statusCode >= 200 && statusCode < 300) {
-            resolve(response);
-          } else if (statusCode === 401) {
-            try {
-              await handleTokenExpired();
-              const newResponse = await sendRequest(config);
-              resolve(newResponse);
-            } catch (error) {
-              reject(error);
-            }
+        url: baseURL + options.url,
+        method: options.method,
+        data: options.data,
+        header,
+        success: (res) => {
+          formatAppLog("log", "at utils/request.js:65", "【Request】请求响应:", res);
+          if (res.statusCode === 200) {
+            resolve(res);
+          } else if (res.statusCode === 401) {
+            formatAppLog("log", "at utils/request.js:69", "【Request】token过期，需要重新登录");
+            userStore.logout();
+            reject(new Error("登录已过期"));
           } else {
-            reject({
-              message: data.message || "请求失败",
-              response
-            });
+            formatAppLog("log", "at utils/request.js:74", "【Request】请求失败:", res.data);
+            reject(res.data);
           }
         },
-        fail: (error) => {
-          reject({
-            message: "网络请求失败",
-            error
-          });
+        fail: (err) => {
+          formatAppLog("log", "at utils/request.js:79", "【Request】请求错误:", err);
+          reject(err);
         }
       });
     });
   };
-  const handleTokenExpired = async () => {
-    const userStore = useUserStore();
-    try {
-      await userStore.refreshAccessToken();
-      return true;
-    } catch (error) {
-      userStore.logout();
-      throw new Error("登录已过期，请重新登录");
-    }
-  };
   const useUserStore = defineStore("user", () => {
     const token = vue.ref("");
-    const refreshToken = vue.ref("");
     const userInfo = vue.ref(null);
     const login = async (data) => {
       try {
         const res = await request.post("/api/auth/login", data);
-        token.value = res.data.access_token;
-        refreshToken.value = res.data.refresh_token;
-        userInfo.value = res.data.user;
-        uni.setStorageSync("access_token", res.data.access_token);
-        uni.setStorageSync("refresh_token", res.data.refresh_token);
-        uni.setStorageSync("user_info", res.data.user);
-        return true;
+        formatAppLog("log", "at stores/user.js:13", "【UserStore】登录响应:", res.data);
+        if (res.data && res.data.data && res.data.data.token) {
+          token.value = res.data.data.token;
+          userInfo.value = res.data.data.user;
+          uni.setStorageSync("token", res.data.data.token);
+          uni.setStorageSync("user_info", res.data.data.user);
+          formatAppLog("log", "at stores/user.js:24", "【UserStore】Token已保存:", token.value);
+          return true;
+        }
+        throw new Error("登录响应中没有token");
       } catch (error) {
+        formatAppLog("error", "at stores/user.js:29", "【UserStore】登录失败:", error);
         throw error;
       }
     };
@@ -4076,62 +4078,56 @@ This will fail in production.`);
     };
     const getUserInfo = async () => {
       try {
-        const res = await request.get("/api/auth/me");
-        userInfo.value = res.data;
-        return res.data;
-      } catch (error) {
-        throw error;
-      }
-    };
-    const refreshAccessToken = async () => {
-      try {
-        const res = await request.post("/api/auth/refresh", null, {
-          headers: {
-            "Authorization": `Bearer ${refreshToken.value}`
-          }
-        });
-        token.value = res.data.access_token;
-        uni.setStorageSync("access_token", res.data.access_token);
-        return res.data.access_token;
+        const userInfoStorage = uni.getStorageSync("user_info");
+        if (userInfoStorage) {
+          userInfo.value = userInfoStorage;
+          return userInfoStorage;
+        }
+        throw new Error("未找到用户信息");
       } catch (error) {
         throw error;
       }
     };
     const logout = () => {
       token.value = "";
-      refreshToken.value = "";
       userInfo.value = null;
-      uni.removeStorageSync("access_token");
-      uni.removeStorageSync("refresh_token");
+      uni.removeStorageSync("token");
       uni.removeStorageSync("user_info");
       uni.reLaunch({
         url: "/pages/login/login"
       });
     };
-    const initState = () => {
-      const accessToken = uni.getStorageSync("access_token");
-      const refreshTokenStorage = uni.getStorageSync("refresh_token");
-      const userInfoStorage = uni.getStorageSync("user_info");
-      if (accessToken)
-        token.value = accessToken;
-      if (refreshTokenStorage)
-        refreshToken.value = refreshTokenStorage;
-      if (userInfoStorage)
-        userInfo.value = userInfoStorage;
+    const initState = async () => {
+      try {
+        formatAppLog("log", "at stores/user.js:76", "【UserStore】开始初始化状态");
+        const storedToken = uni.getStorageSync("token");
+        const userInfoStorage = uni.getStorageSync("user_info");
+        formatAppLog("log", "at stores/user.js:80", "【UserStore】存储的token:", storedToken);
+        formatAppLog("log", "at stores/user.js:81", "【UserStore】存储的用户信息:", userInfoStorage);
+        if (storedToken && userInfoStorage) {
+          token.value = storedToken;
+          userInfo.value = userInfoStorage;
+          formatAppLog("log", "at stores/user.js:86", "【UserStore】用户状态初始化成功");
+          return true;
+        }
+        formatAppLog("log", "at stores/user.js:90", "【UserStore】没有找到token或用户信息");
+        return false;
+      } catch (error) {
+        formatAppLog("error", "at stores/user.js:93", "【UserStore】初始化状态失败:", error);
+        return false;
+      }
     };
     return {
       token,
-      refreshToken,
       userInfo,
       login,
       register,
       getUserInfo,
-      refreshAccessToken,
       logout,
       initState
     };
   });
-  const _sfc_main$f = {
+  const _sfc_main$b = {
     __name: "login",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -4202,10 +4198,10 @@ This will fail in production.`);
       return __returned__;
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_0$3);
-    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_0$2);
-    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2$1);
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_easyinput = resolveEasycom(vue.resolveDynamicComponent("uni-easyinput"), __easycom_0$2);
+    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_0$1);
+    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2);
     return vue.openBlock(), vue.createElementBlock("view", { class: "login-container" }, [
       vue.createElementVNode("view", { class: "login-box" }, [
         vue.createElementVNode("view", { class: "title" }, "登录"),
@@ -4258,8 +4254,8 @@ This will fail in production.`);
       ])
     ]);
   }
-  const PagesLoginLogin = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/login/login.vue"]]);
-  const _sfc_main$e = {
+  const PagesLoginLogin = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/login/login.vue"]]);
+  const _sfc_main$a = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -4314,27 +4310,6 @@ This will fail in production.`);
         refreshData();
       });
       const refreshData = async () => {
-        try {
-          const accountsRes = await request.get("/api/accounts");
-          if (accountsRes.data) {
-            accounts.value = accountsRes.data;
-          }
-          const transactionsRes = await request.get("/api/transactions/recent");
-          if (transactionsRes.data) {
-            recentTransactions.value = transactionsRes.data;
-          }
-          const statsRes = await request.get("/api/statistics/overview");
-          if (statsRes.data) {
-            totalAssets.value = statsRes.data.totalAssets;
-            monthlyIncome.value = statsRes.data.monthlyIncome;
-            monthlyExpense.value = statsRes.data.monthlyExpense;
-          }
-        } catch (error) {
-          uni.showToast({
-            title: error.message || "获取数据失败",
-            icon: "none"
-          });
-        }
       };
       const __returned__ = { totalAssets, monthlyIncome, monthlyExpense, accounts, recentTransactions, navigateTo, refreshData, ref: vue.ref, reactive: vue.reactive, computed: vue.computed, onMounted: vue.onMounted, get request() {
         return request;
@@ -4343,7 +4318,7 @@ This will fail in production.`);
       return __returned__;
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createCommentVNode(" 顶部卡片 - 总资产 "),
       vue.createElementVNode("view", { class: "overview-card" }, [
@@ -4568,857 +4543,1331 @@ This will fail in production.`);
       ])
     ]);
   }
-  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/index/index.vue"]]);
-  const _sfc_main$d = {
-    name: "UniSegmentedControl",
-    emits: ["clickItem"],
+  const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/index/index.vue"]]);
+  class MPAnimation {
+    constructor(options, _this) {
+      this.options = options;
+      this.animation = uni.createAnimation({
+        ...options
+      });
+      this.currentStepAnimates = {};
+      this.next = 0;
+      this.$ = _this;
+    }
+    _nvuePushAnimates(type, args) {
+      let aniObj = this.currentStepAnimates[this.next];
+      let styles = {};
+      if (!aniObj) {
+        styles = {
+          styles: {},
+          config: {}
+        };
+      } else {
+        styles = aniObj;
+      }
+      if (animateTypes1.includes(type)) {
+        if (!styles.styles.transform) {
+          styles.styles.transform = "";
+        }
+        let unit = "";
+        if (type === "rotate") {
+          unit = "deg";
+        }
+        styles.styles.transform += `${type}(${args + unit}) `;
+      } else {
+        styles.styles[type] = `${args}`;
+      }
+      this.currentStepAnimates[this.next] = styles;
+    }
+    _animateRun(styles = {}, config = {}) {
+      let ref = this.$.$refs["ani"].ref;
+      if (!ref)
+        return;
+      return new Promise((resolve, reject) => {
+        nvueAnimation.transition(ref, {
+          styles,
+          ...config
+        }, (res) => {
+          resolve();
+        });
+      });
+    }
+    _nvueNextAnimate(animates, step = 0, fn) {
+      let obj = animates[step];
+      if (obj) {
+        let {
+          styles,
+          config
+        } = obj;
+        this._animateRun(styles, config).then(() => {
+          step += 1;
+          this._nvueNextAnimate(animates, step, fn);
+        });
+      } else {
+        this.currentStepAnimates = {};
+        typeof fn === "function" && fn();
+        this.isEnd = true;
+      }
+    }
+    step(config = {}) {
+      this.animation.step(config);
+      return this;
+    }
+    run(fn) {
+      this.$.animationData = this.animation.export();
+      this.$.timer = setTimeout(() => {
+        typeof fn === "function" && fn();
+      }, this.$.durationTime);
+    }
+  }
+  const animateTypes1 = [
+    "matrix",
+    "matrix3d",
+    "rotate",
+    "rotate3d",
+    "rotateX",
+    "rotateY",
+    "rotateZ",
+    "scale",
+    "scale3d",
+    "scaleX",
+    "scaleY",
+    "scaleZ",
+    "skew",
+    "skewX",
+    "skewY",
+    "translate",
+    "translate3d",
+    "translateX",
+    "translateY",
+    "translateZ"
+  ];
+  const animateTypes2 = ["opacity", "backgroundColor"];
+  const animateTypes3 = ["width", "height", "left", "right", "top", "bottom"];
+  animateTypes1.concat(animateTypes2, animateTypes3).forEach((type) => {
+    MPAnimation.prototype[type] = function(...args) {
+      this.animation[type](...args);
+      return this;
+    };
+  });
+  function createAnimation(option, _this) {
+    if (!_this)
+      return;
+    clearTimeout(_this.timer);
+    return new MPAnimation(option, _this);
+  }
+  const _sfc_main$9 = {
+    name: "uniTransition",
+    emits: ["click", "change"],
     props: {
-      current: {
-        type: Number,
-        default: 0
+      show: {
+        type: Boolean,
+        default: false
       },
-      values: {
-        type: Array,
+      modeClass: {
+        type: [Array, String],
         default() {
-          return [];
+          return "fade";
         }
       },
-      activeColor: {
-        type: String,
-        default: "#2979FF"
+      duration: {
+        type: Number,
+        default: 300
       },
-      inActiveColor: {
-        type: String,
-        default: "transparent"
+      styles: {
+        type: Object,
+        default() {
+          return {};
+        }
       },
-      styleType: {
+      customClass: {
         type: String,
-        default: "button"
+        default: ""
+      },
+      onceRender: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
       return {
-        currentIndex: 0
+        isShow: false,
+        transform: "",
+        opacity: 1,
+        animationData: {},
+        durationTime: 300,
+        config: {}
       };
     },
     watch: {
-      current(val) {
-        if (val !== this.currentIndex) {
-          this.currentIndex = val;
-        }
-      }
-    },
-    computed: {},
-    created() {
-      this.currentIndex = this.current;
-    },
-    methods: {
-      _onClick(index) {
-        if (this.currentIndex !== index) {
-          this.currentIndex = index;
-          this.$emit("clickItem", {
-            currentIndex: index
-          });
-        }
-      }
-    }
-  };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock(
-      "view",
-      {
-        class: vue.normalizeClass([[$props.styleType === "text" ? "segmented-control--text" : "segmented-control--button"], "segmented-control"]),
-        style: vue.normalizeStyle({ borderColor: $props.styleType === "text" ? "" : $props.activeColor })
-      },
-      [
-        (vue.openBlock(true), vue.createElementBlock(
-          vue.Fragment,
-          null,
-          vue.renderList($props.values, (item, index) => {
-            return vue.openBlock(), vue.createElementBlock("view", {
-              class: vue.normalizeClass([[
-                $props.styleType === "text" ? "" : "segmented-control__item--button",
-                index === 0 && $props.styleType === "button" ? "segmented-control__item--button--first" : "",
-                index === $props.values.length - 1 && $props.styleType === "button" ? "segmented-control__item--button--last" : ""
-              ], "segmented-control__item"]),
-              key: index,
-              style: vue.normalizeStyle({ backgroundColor: index === $data.currentIndex && $props.styleType === "button" ? $props.activeColor : $props.styleType === "button" ? $props.inActiveColor : "transparent", borderColor: index === $data.currentIndex && $props.styleType === "text" || $props.styleType === "button" ? $props.activeColor : $props.inActiveColor }),
-              onClick: ($event) => $options._onClick(index)
-            }, [
-              vue.createElementVNode("view", null, [
-                vue.createElementVNode(
-                  "text",
-                  {
-                    style: vue.normalizeStyle({ color: index === $data.currentIndex ? $props.styleType === "text" ? $props.activeColor : "#fff" : $props.styleType === "text" ? "#000" : $props.activeColor }),
-                    class: vue.normalizeClass(["segmented-control__text", $props.styleType === "text" && index === $data.currentIndex ? "segmented-control__item--text" : ""])
-                  },
-                  vue.toDisplayString(item),
-                  7
-                  /* TEXT, CLASS, STYLE */
-                )
-              ])
-            ], 14, ["onClick"]);
-          }),
-          128
-          /* KEYED_FRAGMENT */
-        ))
-      ],
-      6
-      /* CLASS, STYLE */
-    );
-  }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-52668560"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue"]]);
-  const _sfc_main$c = {
-    name: "UniBadge",
-    emits: ["click"],
-    props: {
-      type: {
-        type: String,
-        default: "error"
-      },
-      inverted: {
-        type: Boolean,
-        default: false
-      },
-      isDot: {
-        type: Boolean,
-        default: false
-      },
-      maxNum: {
-        type: Number,
-        default: 99
-      },
-      absolute: {
-        type: String,
-        default: ""
-      },
-      offset: {
-        type: Array,
-        default() {
-          return [0, 0];
-        }
-      },
-      text: {
-        type: [String, Number],
-        default: ""
-      },
-      size: {
-        type: String,
-        default: "small"
-      },
-      customStyle: {
-        type: Object,
-        default() {
-          return {};
-        }
-      }
-    },
-    data() {
-      return {};
-    },
-    computed: {
-      width() {
-        return String(this.text).length * 8 + 12;
-      },
-      classNames() {
-        const {
-          inverted,
-          type,
-          size,
-          absolute
-        } = this;
-        return [
-          inverted ? "uni-badge--" + type + "-inverted" : "",
-          "uni-badge--" + type,
-          "uni-badge--" + size,
-          absolute ? "uni-badge--absolute" : ""
-        ].join(" ");
-      },
-      positionStyle() {
-        if (!this.absolute)
-          return {};
-        let w = this.width / 2, h = 10;
-        if (this.isDot) {
-          w = 5;
-          h = 5;
-        }
-        const x = `${-w + this.offset[0]}px`;
-        const y = `${-h + this.offset[1]}px`;
-        const whiteList = {
-          rightTop: {
-            right: x,
-            top: y
-          },
-          rightBottom: {
-            right: x,
-            bottom: y
-          },
-          leftBottom: {
-            left: x,
-            bottom: y
-          },
-          leftTop: {
-            left: x,
-            top: y
-          }
-        };
-        const match = whiteList[this.absolute];
-        return match ? match : whiteList["rightTop"];
-      },
-      dotStyle() {
-        if (!this.isDot)
-          return {};
-        return {
-          width: "10px",
-          minWidth: "0",
-          height: "10px",
-          padding: "0",
-          borderRadius: "10px"
-        };
-      },
-      displayValue() {
-        const {
-          isDot,
-          text,
-          maxNum
-        } = this;
-        return isDot ? "" : Number(text) > maxNum ? `${maxNum}+` : text;
-      }
-    },
-    methods: {
-      onClick() {
-        this.$emit("click");
-      }
-    }
-  };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "uni-badge--x" }, [
-      vue.renderSlot(_ctx.$slots, "default", {}, void 0, true),
-      $props.text ? (vue.openBlock(), vue.createElementBlock(
-        "text",
-        {
-          key: 0,
-          class: vue.normalizeClass([$options.classNames, "uni-badge"]),
-          style: vue.normalizeStyle([$options.positionStyle, $props.customStyle, $options.dotStyle]),
-          onClick: _cache[0] || (_cache[0] = ($event) => $options.onClick())
-        },
-        vue.toDisplayString($options.displayValue),
-        7
-        /* TEXT, CLASS, STYLE */
-      )) : vue.createCommentVNode("v-if", true)
-    ]);
-  }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-92d7b819"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge.vue"]]);
-  const _sfc_main$b = {
-    name: "UniListItem",
-    emits: ["click", "switchChange"],
-    props: {
-      direction: {
-        type: String,
-        default: "row"
-      },
-      title: {
-        type: String,
-        default: ""
-      },
-      note: {
-        type: String,
-        default: ""
-      },
-      ellipsis: {
-        type: [Number, String],
-        default: 0
-      },
-      disabled: {
-        type: [Boolean, String],
-        default: false
-      },
-      clickable: {
-        type: Boolean,
-        default: false
-      },
-      showArrow: {
-        type: [Boolean, String],
-        default: false
-      },
-      link: {
-        type: [Boolean, String],
-        default: false
-      },
-      to: {
-        type: String,
-        default: ""
-      },
-      showBadge: {
-        type: [Boolean, String],
-        default: false
-      },
-      showSwitch: {
-        type: [Boolean, String],
-        default: false
-      },
-      switchChecked: {
-        type: [Boolean, String],
-        default: false
-      },
-      badgeText: {
-        type: String,
-        default: ""
-      },
-      badgeType: {
-        type: String,
-        default: "success"
-      },
-      badgeStyle: {
-        type: Object,
-        default() {
-          return {};
-        }
-      },
-      rightText: {
-        type: String,
-        default: ""
-      },
-      thumb: {
-        type: String,
-        default: ""
-      },
-      thumbSize: {
-        type: String,
-        default: "base"
-      },
-      showExtraIcon: {
-        type: [Boolean, String],
-        default: false
-      },
-      extraIcon: {
-        type: Object,
-        default() {
-          return {
-            type: "",
-            color: "#000000",
-            size: 20,
-            customPrefix: ""
-          };
-        }
-      },
-      border: {
-        type: Boolean,
-        default: true
-      },
-      customStyle: {
-        type: Object,
-        default() {
-          return {
-            padding: "",
-            backgroundColor: "#FFFFFF"
-          };
-        }
-      },
-      keepScrollPosition: {
-        type: Boolean,
-        default: false
-      }
-    },
-    watch: {
-      "customStyle.padding": {
-        handler(padding) {
-          if (typeof padding == "number") {
-            padding += "";
-          }
-          let paddingArr = padding.split(" ");
-          if (paddingArr.length === 1) {
-            const allPadding = paddingArr[0];
-            this.padding = {
-              "top": allPadding,
-              "right": allPadding,
-              "bottom": allPadding,
-              "left": allPadding
-            };
-          } else if (paddingArr.length === 2) {
-            const [verticalPadding, horizontalPadding] = paddingArr;
-            this.padding = {
-              "top": verticalPadding,
-              "right": horizontalPadding,
-              "bottom": verticalPadding,
-              "left": horizontalPadding
-            };
-          } else if (paddingArr.length === 4) {
-            const [topPadding, rightPadding, bottomPadding, leftPadding] = paddingArr;
-            this.padding = {
-              "top": topPadding,
-              "right": rightPadding,
-              "bottom": bottomPadding,
-              "left": leftPadding
-            };
+      show: {
+        handler(newVal) {
+          if (newVal) {
+            this.open();
+          } else {
+            if (this.isShow) {
+              this.close();
+            }
           }
         },
         immediate: true
       }
     },
-    // inject: ['list'],
-    data() {
-      return {
-        isFirstChild: false,
-        padding: {
-          top: "",
-          right: "",
-          bottom: "",
-          left: ""
+    computed: {
+      // 生成样式数据
+      stylesObject() {
+        let styles = {
+          ...this.styles,
+          "transition-duration": this.duration / 1e3 + "s"
+        };
+        let transform = "";
+        for (let i in styles) {
+          let line = this.toLine(i);
+          transform += line + ":" + styles[i] + ";";
         }
-      };
-    },
-    mounted() {
-      this.list = this.getForm();
-      if (this.list) {
-        if (!this.list.firstChildAppend) {
-          this.list.firstChildAppend = true;
-          this.isFirstChild = true;
-        }
+        return transform;
+      },
+      // 初始化动画条件
+      transformStyles() {
+        return "transform:" + this.transform + ";opacity:" + this.opacity + ";" + this.stylesObject;
       }
+    },
+    created() {
+      this.config = {
+        duration: this.duration,
+        timingFunction: "ease",
+        transformOrigin: "50% 50%",
+        delay: 0
+      };
+      this.durationTime = this.duration;
     },
     methods: {
       /**
-       * 获取父元素实例
+       *  ref 触发 初始化动画
        */
-      getForm(name = "uniList") {
-        let parent = this.$parent;
-        let parentName = parent.$options.name;
-        while (parentName !== name) {
-          parent = parent.$parent;
-          if (!parent)
-            return false;
-          parentName = parent.$options.name;
+      init(obj = {}) {
+        if (obj.duration) {
+          this.durationTime = obj.duration;
         }
-        return parent;
+        this.animation = createAnimation(Object.assign(this.config, obj), this);
       },
+      /**
+       * 点击组件触发回调
+       */
       onClick() {
-        if (this.to !== "") {
-          this.openPage();
+        this.$emit("click", {
+          detail: this.isShow
+        });
+      },
+      /**
+       * ref 触发 动画分组
+       * @param {Object} obj
+       */
+      step(obj, config = {}) {
+        if (!this.animation)
           return;
+        for (let i in obj) {
+          try {
+            if (typeof obj[i] === "object") {
+              this.animation[i](...obj[i]);
+            } else {
+              this.animation[i](obj[i]);
+            }
+          } catch (e) {
+            formatAppLog("error", "at node_modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.vue:148", `方法 ${i} 不存在`);
+          }
         }
-        if (this.clickable || this.link) {
-          this.$emit("click", {
-            data: {}
+        this.animation.step(config);
+        return this;
+      },
+      /**
+       *  ref 触发 执行动画
+       */
+      run(fn) {
+        if (!this.animation)
+          return;
+        this.animation.run(fn);
+      },
+      // 开始过度动画
+      open() {
+        clearTimeout(this.timer);
+        this.transform = "";
+        this.isShow = true;
+        let { opacity, transform } = this.styleInit(false);
+        if (typeof opacity !== "undefined") {
+          this.opacity = opacity;
+        }
+        this.transform = transform;
+        this.$nextTick(() => {
+          this.timer = setTimeout(() => {
+            this.animation = createAnimation(this.config, this);
+            this.tranfromInit(false).step();
+            this.animation.run();
+            this.$emit("change", {
+              detail: this.isShow
+            });
+          }, 20);
+        });
+      },
+      // 关闭过度动画
+      close(type) {
+        if (!this.animation)
+          return;
+        this.tranfromInit(true).step().run(() => {
+          this.isShow = false;
+          this.animationData = null;
+          this.animation = null;
+          let { opacity, transform } = this.styleInit(false);
+          this.opacity = opacity || 1;
+          this.transform = transform;
+          this.$emit("change", {
+            detail: this.isShow
           });
-        }
+        });
       },
-      onSwitchChange(e) {
-        this.$emit("switchChange", e.detail);
-      },
-      openPage() {
-        if (["navigateTo", "redirectTo", "reLaunch", "switchTab"].indexOf(this.link) !== -1) {
-          this.pageApi(this.link);
-        } else {
-          this.pageApi("navigateTo");
-        }
-      },
-      pageApi(api) {
-        let callback = {
-          url: this.to,
-          success: (res) => {
-            this.$emit("click", {
-              data: res
-            });
-          },
-          fail: (err) => {
-            this.$emit("click", {
-              data: err
-            });
+      // 处理动画开始前的默认样式
+      styleInit(type) {
+        let styles = {
+          transform: ""
+        };
+        let buildStyle = (type2, mode) => {
+          if (mode === "fade") {
+            styles.opacity = this.animationType(type2)[mode];
+          } else {
+            styles.transform += this.animationType(type2)[mode] + " ";
           }
         };
-        switch (api) {
-          case "navigateTo":
-            uni.navigateTo(callback);
-            break;
-          case "redirectTo":
-            uni.redirectTo(callback);
-            break;
-          case "reLaunch":
-            uni.reLaunch(callback);
-            break;
-          case "switchTab":
-            uni.switchTab(callback);
-            break;
-          default:
-            uni.navigateTo(callback);
+        if (typeof this.modeClass === "string") {
+          buildStyle(type, this.modeClass);
+        } else {
+          this.modeClass.forEach((mode) => {
+            buildStyle(type, mode);
+          });
         }
+        return styles;
+      },
+      // 处理内置组合动画
+      tranfromInit(type) {
+        let buildTranfrom = (type2, mode) => {
+          let aniNum = null;
+          if (mode === "fade") {
+            aniNum = type2 ? 0 : 1;
+          } else {
+            aniNum = type2 ? "-100%" : "0";
+            if (mode === "zoom-in") {
+              aniNum = type2 ? 0.8 : 1;
+            }
+            if (mode === "zoom-out") {
+              aniNum = type2 ? 1.2 : 1;
+            }
+            if (mode === "slide-right") {
+              aniNum = type2 ? "100%" : "0";
+            }
+            if (mode === "slide-bottom") {
+              aniNum = type2 ? "100%" : "0";
+            }
+          }
+          this.animation[this.animationMode()[mode]](aniNum);
+        };
+        if (typeof this.modeClass === "string") {
+          buildTranfrom(type, this.modeClass);
+        } else {
+          this.modeClass.forEach((mode) => {
+            buildTranfrom(type, mode);
+          });
+        }
+        return this.animation;
+      },
+      animationType(type) {
+        return {
+          fade: type ? 0 : 1,
+          "slide-top": `translateY(${type ? "0" : "-100%"})`,
+          "slide-right": `translateX(${type ? "0" : "100%"})`,
+          "slide-bottom": `translateY(${type ? "0" : "100%"})`,
+          "slide-left": `translateX(${type ? "0" : "-100%"})`,
+          "zoom-in": `scaleX(${type ? 1 : 0.8}) scaleY(${type ? 1 : 0.8})`,
+          "zoom-out": `scaleX(${type ? 1 : 1.2}) scaleY(${type ? 1 : 1.2})`
+        };
+      },
+      // 内置动画类型与实际动画对应字典
+      animationMode() {
+        return {
+          fade: "opacity",
+          "slide-top": "translateY",
+          "slide-right": "translateX",
+          "slide-bottom": "translateY",
+          "slide-left": "translateX",
+          "zoom-in": "scale",
+          "zoom-out": "scale"
+        };
+      },
+      // 驼峰转中横线
+      toLine(name) {
+        return name.replace(/([A-Z])/g, "-$1").toLowerCase();
       }
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
-    const _component_uni_badge = resolveEasycom(vue.resolveDynamicComponent("uni-badge"), __easycom_1$2);
-    return vue.openBlock(), vue.createElementBlock("view", {
-      class: vue.normalizeClass([{ "uni-list-item--disabled": $props.disabled }, "uni-list-item"]),
-      style: vue.normalizeStyle({ "background-color": $props.customStyle.backgroundColor }),
-      "hover-class": !$props.clickable && !$props.link || $props.disabled || $props.showSwitch ? "" : "uni-list-item--hover",
-      onClick: _cache[1] || (_cache[1] = (...args) => $options.onClick && $options.onClick(...args))
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("view", {
+      ref: "ani",
+      animation: $data.animationData,
+      class: vue.normalizeClass($props.customClass),
+      style: vue.normalizeStyle($options.transformStyles),
+      onClick: _cache[0] || (_cache[0] = (...args) => $options.onClick && $options.onClick(...args))
     }, [
-      !$data.isFirstChild ? (vue.openBlock(), vue.createElementBlock(
-        "view",
-        {
-          key: 0,
-          class: vue.normalizeClass(["border--left", { "uni-list--border": $props.border }])
-        },
-        null,
-        2
-        /* CLASS */
-      )) : vue.createCommentVNode("v-if", true),
-      vue.createElementVNode(
-        "view",
-        {
-          class: vue.normalizeClass(["uni-list-item__container", { "container--right": $props.showArrow || $props.link, "flex--direction": $props.direction === "column" }]),
-          style: vue.normalizeStyle({ paddingTop: $data.padding.top, paddingLeft: $data.padding.left, paddingRight: $data.padding.right, paddingBottom: $data.padding.bottom })
-        },
-        [
-          vue.renderSlot(_ctx.$slots, "header", {}, () => [
-            vue.createElementVNode("view", { class: "uni-list-item__header" }, [
-              $props.thumb ? (vue.openBlock(), vue.createElementBlock("view", {
-                key: 0,
-                class: "uni-list-item__icon"
-              }, [
-                vue.createElementVNode("image", {
-                  src: $props.thumb,
-                  class: vue.normalizeClass(["uni-list-item__icon-img", ["uni-list--" + $props.thumbSize]])
-                }, null, 10, ["src"])
-              ])) : $props.showExtraIcon ? (vue.openBlock(), vue.createElementBlock("view", {
-                key: 1,
-                class: "uni-list-item__icon"
-              }, [
-                vue.createVNode(_component_uni_icons, {
-                  customPrefix: $props.extraIcon.customPrefix,
-                  color: $props.extraIcon.color,
-                  size: $props.extraIcon.size,
-                  type: $props.extraIcon.type
-                }, null, 8, ["customPrefix", "color", "size", "type"])
-              ])) : vue.createCommentVNode("v-if", true)
-            ])
-          ], true),
-          vue.renderSlot(_ctx.$slots, "body", {}, () => [
-            vue.createElementVNode(
-              "view",
-              {
-                class: vue.normalizeClass(["uni-list-item__content", { "uni-list-item__content--center": $props.thumb || $props.showExtraIcon || $props.showBadge || $props.showSwitch }])
-              },
-              [
-                $props.title ? (vue.openBlock(), vue.createElementBlock(
-                  "text",
-                  {
-                    key: 0,
-                    class: vue.normalizeClass(["uni-list-item__content-title", [$props.ellipsis !== 0 && $props.ellipsis <= 2 ? "uni-ellipsis-" + $props.ellipsis : ""]])
-                  },
-                  vue.toDisplayString($props.title),
-                  3
-                  /* TEXT, CLASS */
-                )) : vue.createCommentVNode("v-if", true),
-                $props.note ? (vue.openBlock(), vue.createElementBlock(
-                  "text",
-                  {
-                    key: 1,
-                    class: "uni-list-item__content-note"
-                  },
-                  vue.toDisplayString($props.note),
-                  1
-                  /* TEXT */
-                )) : vue.createCommentVNode("v-if", true)
-              ],
-              2
-              /* CLASS */
-            )
-          ], true),
-          vue.renderSlot(_ctx.$slots, "footer", {}, () => [
-            $props.rightText || $props.showBadge || $props.showSwitch ? (vue.openBlock(), vue.createElementBlock(
-              "view",
-              {
-                key: 0,
-                class: vue.normalizeClass(["uni-list-item__extra", { "flex--justify": $props.direction === "column" }])
-              },
-              [
-                $props.rightText ? (vue.openBlock(), vue.createElementBlock(
-                  "text",
-                  {
-                    key: 0,
-                    class: "uni-list-item__extra-text"
-                  },
-                  vue.toDisplayString($props.rightText),
-                  1
-                  /* TEXT */
-                )) : vue.createCommentVNode("v-if", true),
-                $props.showBadge ? (vue.openBlock(), vue.createBlock(_component_uni_badge, {
-                  key: 1,
-                  type: $props.badgeType,
-                  text: $props.badgeText,
-                  "custom-style": $props.badgeStyle
-                }, null, 8, ["type", "text", "custom-style"])) : vue.createCommentVNode("v-if", true),
-                $props.showSwitch ? (vue.openBlock(), vue.createElementBlock("switch", {
-                  key: 2,
-                  disabled: $props.disabled,
-                  checked: $props.switchChecked,
-                  onChange: _cache[0] || (_cache[0] = (...args) => $options.onSwitchChange && $options.onSwitchChange(...args))
-                }, null, 40, ["disabled", "checked"])) : vue.createCommentVNode("v-if", true)
-              ],
-              2
-              /* CLASS */
-            )) : vue.createCommentVNode("v-if", true)
-          ], true)
-        ],
-        6
-        /* CLASS, STYLE */
-      ),
-      $props.showArrow || $props.link ? (vue.openBlock(), vue.createBlock(_component_uni_icons, {
-        key: 1,
-        size: 16,
-        class: "uni-icon-wrapper",
-        color: "#bbb",
-        type: "arrowright"
-      })) : vue.createCommentVNode("v-if", true)
-    ], 14, ["hover-class"]);
+      vue.renderSlot(_ctx.$slots, "default")
+    ], 14, ["animation"])), [
+      [vue.vShow, $data.isShow]
+    ]);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-d88f6cd0"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-list-item/uni-list-item.vue"]]);
-  const _sfc_main$a = {
-    name: "uniList",
-    "mp-weixin": {
-      options: {
-        multipleSlots: false
-      }
-    },
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.vue"]]);
+  const _sfc_main$8 = {
+    name: "uniPopup",
+    components: {},
+    emits: ["change", "maskClick"],
     props: {
-      stackFromEnd: {
-        type: Boolean,
-        default: false
-      },
-      enableBackToTop: {
-        type: [Boolean, String],
-        default: false
-      },
-      scrollY: {
-        type: [Boolean, String],
-        default: false
-      },
-      border: {
+      // 开启动画
+      animation: {
         type: Boolean,
         default: true
       },
-      renderReverse: {
+      // 弹出层类型，可选值，top: 顶部弹出层；bottom：底部弹出层；center：全屏弹出层
+      // message: 消息提示 ; dialog : 对话框
+      type: {
+        type: String,
+        default: "center"
+      },
+      // maskClick
+      isMaskClick: {
         type: Boolean,
-        default: false
+        default: null
+      },
+      // TODO 2 个版本后废弃属性 ，使用 isMaskClick
+      maskClick: {
+        type: Boolean,
+        default: null
+      },
+      backgroundColor: {
+        type: String,
+        default: "none"
+      },
+      safeArea: {
+        type: Boolean,
+        default: true
+      },
+      maskBackgroundColor: {
+        type: String,
+        default: "rgba(0, 0, 0, 0.4)"
+      },
+      borderRadius: {
+        type: String
       }
     },
-    // provide() {
-    // 	return {
-    // 		list: this
-    // 	};
-    // },
+    watch: {
+      /**
+       * 监听type类型
+       */
+      type: {
+        handler: function(type) {
+          if (!this.config[type])
+            return;
+          this[this.config[type]](true);
+        },
+        immediate: true
+      },
+      isDesktop: {
+        handler: function(newVal) {
+          if (!this.config[newVal])
+            return;
+          this[this.config[this.type]](true);
+        },
+        immediate: true
+      },
+      /**
+       * 监听遮罩是否可点击
+       * @param {Object} val
+       */
+      maskClick: {
+        handler: function(val) {
+          this.mkclick = val;
+        },
+        immediate: true
+      },
+      isMaskClick: {
+        handler: function(val) {
+          this.mkclick = val;
+        },
+        immediate: true
+      },
+      // H5 下禁止底部滚动
+      showPopup(show) {
+      }
+    },
+    data() {
+      return {
+        duration: 300,
+        ani: [],
+        showPopup: false,
+        showTrans: false,
+        popupWidth: 0,
+        popupHeight: 0,
+        config: {
+          top: "top",
+          bottom: "bottom",
+          center: "center",
+          left: "left",
+          right: "right",
+          message: "top",
+          dialog: "center",
+          share: "bottom"
+        },
+        maskClass: {
+          position: "fixed",
+          bottom: 0,
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.4)"
+        },
+        transClass: {
+          backgroundColor: "transparent",
+          borderRadius: this.borderRadius || "0",
+          position: "fixed",
+          left: 0,
+          right: 0
+        },
+        maskShow: true,
+        mkclick: true,
+        popupstyle: "top"
+      };
+    },
+    computed: {
+      getStyles() {
+        let res = { backgroundColor: this.bg };
+        if (this.borderRadius || "0") {
+          res = Object.assign(res, { borderRadius: this.borderRadius });
+        }
+        return res;
+      },
+      isDesktop() {
+        return this.popupWidth >= 500 && this.popupHeight >= 500;
+      },
+      bg() {
+        if (this.backgroundColor === "" || this.backgroundColor === "none") {
+          return "transparent";
+        }
+        return this.backgroundColor;
+      }
+    },
+    mounted() {
+      const fixSize = () => {
+        const {
+          windowWidth,
+          windowHeight,
+          windowTop,
+          safeArea,
+          screenHeight,
+          safeAreaInsets
+        } = uni.getSystemInfoSync();
+        this.popupWidth = windowWidth;
+        this.popupHeight = windowHeight + (windowTop || 0);
+        if (safeArea && this.safeArea) {
+          this.safeAreaInsets = safeAreaInsets.bottom;
+        } else {
+          this.safeAreaInsets = 0;
+        }
+      };
+      fixSize();
+    },
+    // TODO vue3
+    unmounted() {
+      this.setH5Visible();
+    },
+    activated() {
+      this.setH5Visible(!this.showPopup);
+    },
+    deactivated() {
+      this.setH5Visible(true);
+    },
     created() {
-      this.firstChildAppend = false;
+      if (this.isMaskClick === null && this.maskClick === null) {
+        this.mkclick = true;
+      } else {
+        this.mkclick = this.isMaskClick !== null ? this.isMaskClick : this.maskClick;
+      }
+      if (this.animation) {
+        this.duration = 300;
+      } else {
+        this.duration = 0;
+      }
+      this.messageChild = null;
+      this.clearPropagation = false;
+      this.maskClass.backgroundColor = this.maskBackgroundColor;
     },
     methods: {
-      loadMore(e) {
-        this.$emit("scrolltolower");
+      setH5Visible(visible = true) {
       },
-      scroll(e) {
-        this.$emit("scroll", e);
+      /**
+       * 公用方法，不显示遮罩层
+       */
+      closeMask() {
+        this.maskShow = false;
+      },
+      /**
+       * 公用方法，遮罩层禁止点击
+       */
+      disableMask() {
+        this.mkclick = false;
+      },
+      // TODO nvue 取消冒泡
+      clear(e) {
+        e.stopPropagation();
+        this.clearPropagation = true;
+      },
+      open(direction) {
+        if (this.showPopup) {
+          return;
+        }
+        let innerType = ["top", "center", "bottom", "left", "right", "message", "dialog", "share"];
+        if (!(direction && innerType.indexOf(direction) !== -1)) {
+          direction = this.type;
+        }
+        if (!this.config[direction]) {
+          formatAppLog("error", "at node_modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.vue:310", "缺少类型：", direction);
+          return;
+        }
+        this[this.config[direction]]();
+        this.$emit("change", {
+          show: true,
+          type: direction
+        });
+      },
+      close(type) {
+        this.showTrans = false;
+        this.$emit("change", {
+          show: false,
+          type: this.type
+        });
+        clearTimeout(this.timer);
+        this.timer = setTimeout(() => {
+          this.showPopup = false;
+        }, 300);
+      },
+      // TODO 处理冒泡事件，头条的冒泡事件有问题 ，先这样兼容
+      touchstart() {
+        this.clearPropagation = false;
+      },
+      onTap() {
+        if (this.clearPropagation) {
+          this.clearPropagation = false;
+          return;
+        }
+        this.$emit("maskClick");
+        if (!this.mkclick)
+          return;
+        this.close();
+      },
+      /**
+       * 顶部弹出样式处理
+       */
+      top(type) {
+        this.popupstyle = this.isDesktop ? "fixforpc-top" : "top";
+        this.ani = ["slide-top"];
+        this.transClass = {
+          position: "fixed",
+          left: 0,
+          right: 0,
+          backgroundColor: this.bg,
+          borderRadius: this.borderRadius || "0"
+        };
+        if (type)
+          return;
+        this.showPopup = true;
+        this.showTrans = true;
+        this.$nextTick(() => {
+          this.showPoptrans();
+          if (this.messageChild && this.type === "message") {
+            this.messageChild.timerClose();
+          }
+        });
+      },
+      /**
+       * 底部弹出样式处理
+       */
+      bottom(type) {
+        this.popupstyle = "bottom";
+        this.ani = ["slide-bottom"];
+        this.transClass = {
+          position: "fixed",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          paddingBottom: this.safeAreaInsets + "px",
+          backgroundColor: this.bg,
+          borderRadius: this.borderRadius || "0"
+        };
+        if (type)
+          return;
+        this.showPoptrans();
+      },
+      /**
+       * 中间弹出样式处理
+       */
+      center(type) {
+        this.popupstyle = "center";
+        this.ani = ["zoom-out", "fade"];
+        this.transClass = {
+          position: "fixed",
+          display: "flex",
+          flexDirection: "column",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          top: 0,
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: this.borderRadius || "0"
+        };
+        if (type)
+          return;
+        this.showPoptrans();
+      },
+      left(type) {
+        this.popupstyle = "left";
+        this.ani = ["slide-left"];
+        this.transClass = {
+          position: "fixed",
+          left: 0,
+          bottom: 0,
+          top: 0,
+          backgroundColor: this.bg,
+          borderRadius: this.borderRadius || "0",
+          display: "flex",
+          flexDirection: "column"
+        };
+        if (type)
+          return;
+        this.showPoptrans();
+      },
+      right(type) {
+        this.popupstyle = "right";
+        this.ani = ["slide-right"];
+        this.transClass = {
+          position: "fixed",
+          bottom: 0,
+          right: 0,
+          top: 0,
+          backgroundColor: this.bg,
+          borderRadius: this.borderRadius || "0",
+          display: "flex",
+          flexDirection: "column"
+        };
+        if (type)
+          return;
+        this.showPoptrans();
+      },
+      showPoptrans() {
+        this.$nextTick(() => {
+          this.showPopup = true;
+          this.showTrans = true;
+        });
       }
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "uni-list uni-border-top-bottom" }, [
-      $props.border ? (vue.openBlock(), vue.createElementBlock("view", {
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_transition = resolveEasycom(vue.resolveDynamicComponent("uni-transition"), __easycom_0);
+    return $data.showPopup ? (vue.openBlock(), vue.createElementBlock(
+      "view",
+      {
         key: 0,
-        class: "uni-list--border-top"
-      })) : vue.createCommentVNode("v-if", true),
-      vue.renderSlot(_ctx.$slots, "default", {}, void 0, true),
-      $props.border ? (vue.openBlock(), vue.createElementBlock("view", {
-        key: 1,
-        class: "uni-list--border-bottom"
-      })) : vue.createCommentVNode("v-if", true)
-    ]);
+        class: vue.normalizeClass(["uni-popup", [$data.popupstyle, $options.isDesktop ? "fixforpc-z-index" : ""]])
+      },
+      [
+        vue.createElementVNode(
+          "view",
+          {
+            onTouchstart: _cache[1] || (_cache[1] = (...args) => $options.touchstart && $options.touchstart(...args))
+          },
+          [
+            $data.maskShow ? (vue.openBlock(), vue.createBlock(_component_uni_transition, {
+              key: "1",
+              name: "mask",
+              "mode-class": "fade",
+              styles: $data.maskClass,
+              duration: $data.duration,
+              show: $data.showTrans,
+              onClick: $options.onTap
+            }, null, 8, ["styles", "duration", "show", "onClick"])) : vue.createCommentVNode("v-if", true),
+            vue.createVNode(_component_uni_transition, {
+              key: "2",
+              "mode-class": $data.ani,
+              name: "content",
+              styles: $data.transClass,
+              duration: $data.duration,
+              show: $data.showTrans,
+              onClick: $options.onTap
+            }, {
+              default: vue.withCtx(() => [
+                vue.createElementVNode(
+                  "view",
+                  {
+                    class: vue.normalizeClass(["uni-popup__wrapper", [$data.popupstyle]]),
+                    style: vue.normalizeStyle($options.getStyles),
+                    onClick: _cache[0] || (_cache[0] = (...args) => $options.clear && $options.clear(...args))
+                  },
+                  [
+                    vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
+                  ],
+                  6
+                  /* CLASS, STYLE */
+                )
+              ]),
+              _: 3
+              /* FORWARDED */
+            }, 8, ["mode-class", "styles", "duration", "show", "onClick"])
+          ],
+          32
+          /* NEED_HYDRATION */
+        )
+      ],
+      2
+      /* CLASS */
+    )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-cc89e7d4"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-list/uni-list.vue"]]);
-  const _sfc_main$9 = {
+  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-7db519c7"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.vue"]]);
+  const _sfc_main$7 = {
     __name: "assets",
     setup(__props, { expose: __expose }) {
       __expose();
-      const currentTab = vue.ref(0);
-      const cashAccounts = vue.ref([
-        { name: "工商银行", type: "储蓄卡", balance: 5e4 },
-        { name: "支付宝", type: "电子钱包", balance: 15e3 },
-        { name: "微信钱包", type: "电子钱包", balance: 8e3 }
-      ]);
-      const investments = vue.ref([
-        { name: "股票账户", type: "股票", amount: 6e4, rate: 8.5 },
-        { name: "基金组合", type: "基金", amount: 3e4, rate: 5.2 },
-        { name: "定期存款", type: "存款", amount: 1e5, rate: 2.8 }
-      ]);
-      const fixedAssets = vue.ref([
-        { name: "房产", type: "不动产", value: 2e6, purchaseDate: "2020-01-01" },
-        { name: "汽车", type: "交通工具", value: 15e4, purchaseDate: "2022-06-15" }
-      ]);
-      const onTabChange = (e) => {
-        currentTab.value = e.currentIndex;
+      const accounts = vue.ref([]);
+      const isLoading = vue.ref(false);
+      const accountTypes = ["现金", "银行卡", "支付宝", "微信", "公积金"];
+      const typeIndex = vue.ref(0);
+      const form = vue.ref(null);
+      const formData = vue.reactive({
+        name: "",
+        type: "",
+        balance: ""
+      });
+      const rules = {
+        name: {
+          rules: [{
+            required: true,
+            errorMessage: "请输入账户名称"
+          }]
+        },
+        type: {
+          rules: [{
+            required: true,
+            errorMessage: "请选择账户类型"
+          }]
+        },
+        balance: {
+          rules: [{
+            required: true,
+            errorMessage: "请输入初始余额"
+          }]
+        }
       };
-      const handleAccountClick = (account) => {
-        uni.navigateTo({
-          url: `/pages/assets/detail?type=cash&id=${account.id}`
-        });
+      const createModal = vue.ref(null);
+      const currentStep = vue.ref(1);
+      const showTypeDropdown = vue.ref(false);
+      const formattedBalance = vue.ref("");
+      const handleNameInput = () => {
+        if (formData.name) {
+          currentStep.value = 2;
+        }
       };
-      const handleInvestmentClick = (investment) => {
-        uni.navigateTo({
-          url: `/pages/assets/detail?type=investment&id=${investment.id}`
-        });
+      const toggleTypeDropdown = () => {
+        showTypeDropdown.value = !showTypeDropdown.value;
       };
-      const handleAssetClick = (asset) => {
-        uni.navigateTo({
-          url: `/pages/assets/detail?type=fixed&id=${asset.id}`
-        });
+      const selectAccountType = (type) => {
+        formData.type = type;
+        showTypeDropdown.value = false;
+        currentStep.value = 3;
       };
-      const __returned__ = { currentTab, cashAccounts, investments, fixedAssets, onTabChange, handleAccountClick, handleInvestmentClick, handleAssetClick, ref: vue.ref };
+      const handleBalanceInput = (e) => {
+        const value = e.detail.value.replace(/[^\d.]/g, "");
+        if (value) {
+          const number = parseFloat(value);
+          if (!isNaN(number)) {
+            formattedBalance.value = `￥${number.toLocaleString("zh-CN", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+            })}`;
+          }
+        } else {
+          formattedBalance.value = "";
+        }
+      };
+      const showCreateModal = () => {
+        createModal.value.open();
+      };
+      const hideCreateModal = () => {
+        createModal.value.close();
+        formData.name = "";
+        formData.type = "";
+        formData.balance = "";
+        formattedBalance.value = "";
+        currentStep.value = 1;
+        showTypeDropdown.value = false;
+      };
+      const refreshAccounts = async () => {
+        if (isLoading.value)
+          return;
+        try {
+          isLoading.value = true;
+          const res = await request.get("/api/assets/accounts");
+          if (res.data) {
+            accounts.value = res.data;
+          }
+        } catch (error) {
+          formatAppLog("log", "at pages/assets/assets.vue:265", "【Assets】获取账户列表失败:", error);
+          if (error.message === "请先登录" || error.message === "登录已过期") {
+            return;
+          }
+          uni.showToast({
+            title: error.message || "获取数据失败",
+            icon: "none"
+          });
+        } finally {
+          isLoading.value = false;
+        }
+      };
+      const handleSubmit = async () => {
+        try {
+          const valid = await form.value.validate();
+          if (!valid)
+            return;
+          const result = await request.post("/api/assets/accounts", {
+            name: formData.name,
+            type: formData.type,
+            balance: parseFloat(formData.balance)
+          });
+          if (result.data) {
+            uni.showToast({
+              title: "创建成功",
+              icon: "success"
+            });
+            hideCreateModal();
+            setTimeout(() => {
+              refreshAccounts();
+            }, 300);
+          }
+        } catch (error) {
+          uni.showToast({
+            title: error.message || "创建失败",
+            icon: "none"
+          });
+        }
+      };
+      vue.onMounted(async () => {
+        try {
+          const userStore = useUserStore();
+          formatAppLog("log", "at pages/assets/assets.vue:318", "【Assets】开始初始化页面");
+          let retryCount = 0;
+          let isValid = false;
+          while (retryCount < 3 && !isValid) {
+            try {
+              isValid = await userStore.initState();
+              formatAppLog("log", "at pages/assets/assets.vue:327", "【Assets】用户状态初始化结果:", isValid, "重试次数:", retryCount);
+              if (isValid) {
+                formatAppLog("log", "at pages/assets/assets.vue:330", "【Assets】用户状态有效，开始获取账户列表");
+                await refreshAccounts();
+                break;
+              } else {
+                formatAppLog("log", "at pages/assets/assets.vue:334", "【Assets】用户未登录或token无效");
+                retryCount++;
+                if (retryCount < 3) {
+                  formatAppLog("log", "at pages/assets/assets.vue:337", "【Assets】等待1秒后重试");
+                  await new Promise((resolve) => setTimeout(resolve, 1e3));
+                }
+              }
+            } catch (error) {
+              formatAppLog("error", "at pages/assets/assets.vue:342", "【Assets】初始化尝试失败:", error);
+              retryCount++;
+              if (retryCount < 3) {
+                formatAppLog("log", "at pages/assets/assets.vue:345", "【Assets】等待1秒后重试");
+                await new Promise((resolve) => setTimeout(resolve, 1e3));
+              }
+            }
+          }
+          if (!isValid) {
+            formatAppLog("log", "at pages/assets/assets.vue:352", "【Assets】多次尝试后仍未成功，执行登出操作");
+            userStore.logout();
+          }
+        } catch (error) {
+          formatAppLog("error", "at pages/assets/assets.vue:356", "【Assets】初始化过程发生错误:", error);
+          const userStore = useUserStore();
+          userStore.logout();
+        }
+      });
+      const __returned__ = { accounts, isLoading, accountTypes, typeIndex, form, formData, rules, createModal, currentStep, showTypeDropdown, formattedBalance, handleNameInput, toggleTypeDropdown, selectAccountType, handleBalanceInput, showCreateModal, hideCreateModal, refreshAccounts, handleSubmit, ref: vue.ref, reactive: vue.reactive, onMounted: vue.onMounted, get request() {
+        return request;
+      }, get useUserStore() {
+        return useUserStore;
+      } };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_segmented_control = resolveEasycom(vue.resolveDynamicComponent("uni-segmented-control"), __easycom_0$1);
-    const _component_uni_list_item = resolveEasycom(vue.resolveDynamicComponent("uni-list-item"), __easycom_1$1);
-    const _component_uni_list = resolveEasycom(vue.resolveDynamicComponent("uni-list"), __easycom_2);
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
-    return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
-      vue.createCommentVNode(" 资产分类标签页 "),
-      vue.createVNode(_component_uni_segmented_control, {
-        current: $setup.currentTab,
-        values: ["现金账户", "投资理财", "固定资产"],
-        onClickItem: $setup.onTabChange,
-        styleType: "button",
-        activeColor: "#007AFF"
-      }, null, 8, ["current"]),
-      vue.createCommentVNode(" 现金账户列表 "),
-      vue.withDirectives(vue.createElementVNode(
-        "view",
-        { class: "tab-content" },
-        [
-          vue.createVNode(_component_uni_list, null, {
-            default: vue.withCtx(() => [
-              (vue.openBlock(true), vue.createElementBlock(
-                vue.Fragment,
-                null,
-                vue.renderList($setup.cashAccounts, (account, index) => {
-                  return vue.openBlock(), vue.createBlock(_component_uni_list_item, {
-                    key: index,
-                    title: account.name,
-                    note: account.type,
-                    rightText: "￥" + account.balance.toFixed(2),
-                    showExtraIcon: true,
-                    extraIcon: { type: "wallet-filled", color: "#007AFF", size: 24 },
-                    onClick: ($event) => $setup.handleAccountClick(account)
-                  }, null, 8, ["title", "note", "rightText", "onClick"]);
-                }),
-                128
-                /* KEYED_FRAGMENT */
-              ))
-            ]),
-            _: 1
-            /* STABLE */
-          })
-        ],
-        512
-        /* NEED_PATCH */
-      ), [
-        [vue.vShow, $setup.currentTab === 0]
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_0$1);
+    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2);
+    const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_3);
+    return vue.openBlock(), vue.createElementBlock("view", { class: "assets-container" }, [
+      vue.createCommentVNode(" 顶部导航 "),
+      vue.createElementVNode("view", { class: "nav-bar" }, [
+        vue.createElementVNode("text", { class: "title" })
       ]),
-      vue.createCommentVNode(" 投资理财列表 "),
-      vue.withDirectives(vue.createElementVNode(
-        "view",
-        { class: "tab-content" },
-        [
-          vue.createVNode(_component_uni_list, null, {
-            default: vue.withCtx(() => [
-              (vue.openBlock(true), vue.createElementBlock(
-                vue.Fragment,
-                null,
-                vue.renderList($setup.investments, (investment, index) => {
-                  return vue.openBlock(), vue.createBlock(_component_uni_list_item, {
-                    key: index,
-                    title: investment.name,
-                    note: investment.type,
-                    rightText: "￥" + investment.amount.toFixed(2),
-                    showExtraIcon: true,
-                    extraIcon: { type: "chart", color: "#36B37E", size: 24 },
-                    onClick: ($event) => $setup.handleInvestmentClick(investment)
-                  }, {
-                    footer: vue.withCtx(() => [
-                      vue.createElementVNode("view", { class: "rate-wrapper" }, [
-                        vue.createVNode(_component_uni_icons, {
-                          type: investment.rate >= 0 ? "arrow-up" : "arrow-down",
-                          color: investment.rate >= 0 ? "#07c160" : "#ff4d4f",
-                          size: "14"
-                        }, null, 8, ["type", "color"]),
-                        vue.createElementVNode(
-                          "text",
-                          {
-                            class: vue.normalizeClass(["rate", investment.rate >= 0 ? "positive" : "negative"])
-                          },
-                          vue.toDisplayString((investment.rate > 0 ? "+" : "") + investment.rate.toFixed(2)) + "% ",
-                          3
-                          /* TEXT, CLASS */
-                        )
-                      ])
-                    ]),
-                    _: 2
-                    /* DYNAMIC */
-                  }, 1032, ["title", "note", "rightText", "onClick"]);
-                }),
-                128
-                /* KEYED_FRAGMENT */
-              ))
-            ]),
-            _: 1
-            /* STABLE */
-          })
-        ],
-        512
-        /* NEED_PATCH */
-      ), [
-        [vue.vShow, $setup.currentTab === 1]
+      vue.createCommentVNode(" 账户列表 "),
+      vue.createElementVNode("view", { class: "account-list" }, [
+        (vue.openBlock(true), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList($setup.accounts, (account, index) => {
+            return vue.openBlock(), vue.createElementBlock(
+              "view",
+              {
+                class: "account-item",
+                key: account.id,
+                style: vue.normalizeStyle({ animationDelay: index * 0.1 + "s" })
+              },
+              [
+                vue.createElementVNode("view", { class: "account-icon" }, [
+                  vue.createElementVNode(
+                    "text",
+                    {
+                      class: vue.normalizeClass(["iconfont", {
+                        "icon-cash": account.type === "现金",
+                        "icon-bank": account.type === "银行卡",
+                        "icon-alipay": account.type === "支付宝",
+                        "icon-wechat": account.type === "微信",
+                        "icon-fund": account.type === "公积金"
+                      }])
+                    },
+                    null,
+                    2
+                    /* CLASS */
+                  )
+                ]),
+                vue.createElementVNode("view", { class: "account-info" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "account-name" },
+                    vue.toDisplayString(account.name),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode(
+                    "text",
+                    { class: "account-balance" },
+                    "￥" + vue.toDisplayString(account.balance),
+                    1
+                    /* TEXT */
+                  )
+                ]),
+                vue.createElementVNode(
+                  "text",
+                  {
+                    class: vue.normalizeClass(["account-type", account.type])
+                  },
+                  vue.toDisplayString(account.type),
+                  3
+                  /* TEXT, CLASS */
+                )
+              ],
+              4
+              /* STYLE */
+            );
+          }),
+          128
+          /* KEYED_FRAGMENT */
+        ))
       ]),
-      vue.createCommentVNode(" 固定资产列表 "),
-      vue.withDirectives(vue.createElementVNode(
-        "view",
-        { class: "tab-content" },
-        [
-          vue.createVNode(_component_uni_list, null, {
-            default: vue.withCtx(() => [
-              (vue.openBlock(true), vue.createElementBlock(
-                vue.Fragment,
-                null,
-                vue.renderList($setup.fixedAssets, (asset, index) => {
-                  return vue.openBlock(), vue.createBlock(_component_uni_list_item, {
-                    key: index,
-                    title: asset.name,
-                    note: "购入日期：" + asset.purchaseDate,
-                    rightText: "￥" + asset.value.toFixed(2),
-                    showExtraIcon: true,
-                    extraIcon: { type: "home", color: "#ff4d4f", size: 24 },
-                    onClick: ($event) => $setup.handleAssetClick(asset)
-                  }, null, 8, ["title", "note", "rightText", "onClick"]);
-                }),
-                128
-                /* KEYED_FRAGMENT */
-              ))
-            ]),
-            _: 1
-            /* STABLE */
-          })
-        ],
+      vue.createCommentVNode(" 创建账户按钮 "),
+      vue.createElementVNode("view", { class: "button-group" }, [
+        vue.createElementVNode("button", {
+          class: "create-btn",
+          onClick: $setup.showCreateModal
+        }, [
+          vue.createElementVNode("text", { class: "iconfont icon-add" }),
+          vue.createElementVNode("text", null, "创建账户")
+        ])
+      ]),
+      vue.createCommentVNode(" 创建账户弹窗 "),
+      vue.createVNode(
+        _component_uni_popup,
+        {
+          ref: "createModal",
+          type: "bottom",
+          "background-color": "none",
+          "safe-area": ""
+        },
+        {
+          default: vue.withCtx(() => [
+            vue.createElementVNode("view", { class: "create-popup" }, [
+              vue.createElementVNode("view", { class: "popup-header" }, [
+                vue.createElementVNode("text", { class: "popup-title" }, "创建账户"),
+                vue.createElementVNode("text", {
+                  class: "close-btn iconfont icon-close",
+                  onClick: $setup.hideCreateModal
+                })
+              ]),
+              vue.createCommentVNode(" 添加进度指示器 "),
+              vue.createElementVNode("view", { class: "progress-bar" }, [
+                vue.createElementVNode(
+                  "view",
+                  {
+                    class: vue.normalizeClass(["progress-step", { active: $setup.currentStep >= 1, completed: $setup.currentStep > 1 }])
+                  },
+                  [
+                    vue.createElementVNode("text", { class: "step-number" }, "1"),
+                    vue.createElementVNode("text", { class: "step-text" }, "账户名称")
+                  ],
+                  2
+                  /* CLASS */
+                ),
+                vue.createElementVNode(
+                  "view",
+                  {
+                    class: vue.normalizeClass(["progress-line", { active: $setup.currentStep > 1 }])
+                  },
+                  null,
+                  2
+                  /* CLASS */
+                ),
+                vue.createElementVNode(
+                  "view",
+                  {
+                    class: vue.normalizeClass(["progress-step", { active: $setup.currentStep >= 2, completed: $setup.currentStep > 2 }])
+                  },
+                  [
+                    vue.createElementVNode("text", { class: "step-number" }, "2"),
+                    vue.createElementVNode("text", { class: "step-text" }, "账户类型")
+                  ],
+                  2
+                  /* CLASS */
+                ),
+                vue.createElementVNode(
+                  "view",
+                  {
+                    class: vue.normalizeClass(["progress-line", { active: $setup.currentStep > 2 }])
+                  },
+                  null,
+                  2
+                  /* CLASS */
+                ),
+                vue.createElementVNode(
+                  "view",
+                  {
+                    class: vue.normalizeClass(["progress-step", { active: $setup.currentStep >= 3 }])
+                  },
+                  [
+                    vue.createElementVNode("text", { class: "step-number" }, "3"),
+                    vue.createElementVNode("text", { class: "step-text" }, "初始余额")
+                  ],
+                  2
+                  /* CLASS */
+                )
+              ]),
+              vue.createElementVNode("view", { class: "popup-body" }, [
+                vue.createVNode(_component_uni_forms, {
+                  ref: "form",
+                  model: $setup.formData,
+                  rules: $setup.rules
+                }, {
+                  default: vue.withCtx(() => [
+                    vue.createVNode(_component_uni_forms_item, { name: "name" }, {
+                      default: vue.withCtx(() => [
+                        vue.createElementVNode("view", { class: "form-item" }, [
+                          vue.createElementVNode("text", { class: "label" }, "账户名称"),
+                          vue.withDirectives(vue.createElementVNode(
+                            "input",
+                            {
+                              type: "text",
+                              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.formData.name = $event),
+                              placeholder: "请输入账户名称",
+                              "placeholder-class": "placeholder",
+                              onInput: $setup.handleNameInput
+                            },
+                            null,
+                            544
+                            /* NEED_HYDRATION, NEED_PATCH */
+                          ), [
+                            [vue.vModelText, $setup.formData.name]
+                          ])
+                        ])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    }),
+                    vue.createVNode(_component_uni_forms_item, { name: "type" }, {
+                      default: vue.withCtx(() => [
+                        vue.createElementVNode("view", { class: "form-item" }, [
+                          vue.createElementVNode("text", { class: "label" }, "账户类型"),
+                          vue.createElementVNode("view", {
+                            class: "account-type-selector",
+                            onClick: $setup.toggleTypeDropdown
+                          }, [
+                            vue.createElementVNode(
+                              "view",
+                              {
+                                class: vue.normalizeClass(["selected-type", { placeholder: !$setup.formData.type }])
+                              },
+                              [
+                                $setup.formData.type ? (vue.openBlock(), vue.createElementBlock(
+                                  vue.Fragment,
+                                  { key: 0 },
+                                  [
+                                    vue.createElementVNode(
+                                      "text",
+                                      {
+                                        class: vue.normalizeClass(["type-icon iconfont", {
+                                          "icon-cash": $setup.formData.type === "现金",
+                                          "icon-bank": $setup.formData.type === "银行卡",
+                                          "icon-alipay": $setup.formData.type === "支付宝",
+                                          "icon-wechat": $setup.formData.type === "微信",
+                                          "icon-fund": $setup.formData.type === "公积金"
+                                        }])
+                                      },
+                                      null,
+                                      2
+                                      /* CLASS */
+                                    ),
+                                    vue.createElementVNode(
+                                      "text",
+                                      null,
+                                      vue.toDisplayString($setup.formData.type),
+                                      1
+                                      /* TEXT */
+                                    )
+                                  ],
+                                  64
+                                  /* STABLE_FRAGMENT */
+                                )) : (vue.openBlock(), vue.createElementBlock("text", { key: 1 }, "请选择账户类型")),
+                                vue.createElementVNode("text", { class: "iconfont icon-arrow-down" })
+                              ],
+                              2
+                              /* CLASS */
+                            ),
+                            vue.createCommentVNode(" 账户类型下拉菜单 "),
+                            $setup.showTypeDropdown ? (vue.openBlock(), vue.createElementBlock("view", {
+                              key: 0,
+                              class: "type-dropdown"
+                            }, [
+                              (vue.openBlock(), vue.createElementBlock(
+                                vue.Fragment,
+                                null,
+                                vue.renderList($setup.accountTypes, (type) => {
+                                  return vue.createElementVNode("view", {
+                                    class: vue.normalizeClass(["type-option", { active: $setup.formData.type === type }]),
+                                    key: type,
+                                    onClick: vue.withModifiers(($event) => $setup.selectAccountType(type), ["stop"])
+                                  }, [
+                                    vue.createElementVNode(
+                                      "view",
+                                      {
+                                        class: vue.normalizeClass(["type-icon-wrapper", type.toLowerCase()])
+                                      },
+                                      [
+                                        vue.createElementVNode(
+                                          "text",
+                                          {
+                                            class: vue.normalizeClass(["type-icon iconfont", {
+                                              "icon-cash": type === "现金",
+                                              "icon-bank": type === "银行卡",
+                                              "icon-alipay": type === "支付宝",
+                                              "icon-wechat": type === "微信",
+                                              "icon-fund": type === "公积金"
+                                            }])
+                                          },
+                                          null,
+                                          2
+                                          /* CLASS */
+                                        )
+                                      ],
+                                      2
+                                      /* CLASS */
+                                    ),
+                                    vue.createElementVNode(
+                                      "text",
+                                      null,
+                                      vue.toDisplayString(type),
+                                      1
+                                      /* TEXT */
+                                    ),
+                                    $setup.formData.type === type ? (vue.openBlock(), vue.createElementBlock("text", {
+                                      key: 0,
+                                      class: "iconfont icon-check"
+                                    })) : vue.createCommentVNode("v-if", true)
+                                  ], 10, ["onClick"]);
+                                }),
+                                64
+                                /* STABLE_FRAGMENT */
+                              ))
+                            ])) : vue.createCommentVNode("v-if", true)
+                          ])
+                        ])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    }),
+                    vue.createVNode(_component_uni_forms_item, { name: "balance" }, {
+                      default: vue.withCtx(() => [
+                        vue.createElementVNode("view", { class: "form-item" }, [
+                          vue.createElementVNode("text", { class: "label" }, "初始余额"),
+                          vue.createElementVNode("view", { class: "balance-input" }, [
+                            vue.createElementVNode("text", { class: "currency" }, "￥"),
+                            vue.withDirectives(vue.createElementVNode(
+                              "input",
+                              {
+                                type: "digit",
+                                "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => $setup.formData.balance = $event),
+                                placeholder: "请输入初始余额",
+                                "placeholder-class": "placeholder",
+                                onInput: $setup.handleBalanceInput
+                              },
+                              null,
+                              544
+                              /* NEED_HYDRATION, NEED_PATCH */
+                            ), [
+                              [vue.vModelText, $setup.formData.balance]
+                            ])
+                          ]),
+                          vue.createElementVNode(
+                            "text",
+                            { class: "formatted-balance" },
+                            vue.toDisplayString($setup.formattedBalance),
+                            1
+                            /* TEXT */
+                          )
+                        ])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    })
+                  ]),
+                  _: 1
+                  /* STABLE */
+                }, 8, ["model"]),
+                vue.createElementVNode("button", {
+                  class: "submit-btn",
+                  onClick: $setup.handleSubmit
+                }, "确定")
+              ])
+            ])
+          ]),
+          _: 1
+          /* STABLE */
+        },
         512
         /* NEED_PATCH */
-      ), [
-        [vue.vShow, $setup.currentTab === 2]
-      ])
+      )
     ]);
   }
-  const PagesAssetsAssets = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/assets/assets.vue"]]);
-  const _sfc_main$8 = {
+  const PagesAssetsAssets = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/assets/assets.vue"]]);
+  const _sfc_main$6 = {
     __name: "statistics",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -5551,7 +6000,7 @@ This will fail in production.`);
       return __returned__;
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_qiun_data_charts = vue.resolveComponent("qiun-data-charts");
     return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
       vue.createCommentVNode(" 时间范围选择 "),
@@ -5770,7 +6219,7 @@ This will fail in production.`);
       ])
     ]);
   }
-  const PagesStatisticsStatistics = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/statistics/statistics.vue"]]);
+  const PagesStatisticsStatistics = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/pages/statistics/statistics.vue"]]);
   let Calendar$1 = class Calendar {
     constructor({
       selected,
@@ -6127,7 +6576,7 @@ This will fail in production.`);
     }
     return value;
   }
-  const _sfc_main$7 = {
+  const _sfc_main$5 = {
     props: {
       weeks: {
         type: Object,
@@ -6161,7 +6610,7 @@ This will fail in production.`);
       }
     }
   };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -6217,7 +6666,7 @@ This will fail in production.`);
       /* CLASS, NEED_HYDRATION */
     );
   }
-  const calendarItem = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-fe34d61e"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/calendar-item.vue"]]);
+  const calendarItem = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-fe34d61e"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/calendar-item.vue"]]);
   const isObject = (val) => val !== null && typeof val === "object";
   const defaultDelimiters = ["{", "}"];
   class BaseFormatter {
@@ -6578,7 +7027,7 @@ This will fail in production.`);
   const {
     t: t$1
   } = initVueI18n(i18nMessages);
-  const _sfc_main$6 = {
+  const _sfc_main$4 = {
     name: "UniDatetimePicker",
     data() {
       return {
@@ -7182,7 +7631,7 @@ This will fail in production.`);
       }
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-datetime-picker" }, [
       vue.createElementVNode("view", {
         onClick: _cache[0] || (_cache[0] = (...args) => $options.initTimePicker && $options.initTimePicker(...args))
@@ -7459,11 +7908,11 @@ This will fail in production.`);
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const TimePicker = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-eeeb8241"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/time-picker.vue"]]);
+  const TimePicker = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-eeeb8241"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/time-picker.vue"]]);
   const {
     t
   } = initVueI18n(i18nMessages);
-  const _sfc_main$5 = {
+  const _sfc_main$3 = {
     components: {
       calendarItem,
       timePicker: TimePicker
@@ -7944,10 +8393,10 @@ This will fail in production.`);
       }
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_calendar_item = vue.resolveComponent("calendar-item");
     const _component_time_picker = vue.resolveComponent("time-picker");
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$3);
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -8237,8 +8686,8 @@ This will fail in production.`);
       /* NEED_HYDRATION */
     );
   }
-  const Calendar = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-bbebfd0f"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/calendar.vue"]]);
-  const _sfc_main$4 = {
+  const Calendar = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-bbebfd0f"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/calendar.vue"]]);
+  const _sfc_main$2 = {
     name: "UniDatetimePicker",
     options: {
       virtualHost: true
@@ -8894,8 +9343,8 @@ This will fail in production.`);
       }
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$3);
     const _component_time_picker = vue.resolveComponent("time-picker");
     const _component_Calendar = vue.resolveComponent("Calendar");
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-date" }, [
@@ -9238,798 +9687,7 @@ This will fail in production.`);
       }, null, 8, ["date", "defTime", "start-date", "end-date", "selectableTimes", "startPlaceholder", "endPlaceholder", "default-value", "pleStatus", "range", "hasTime", "hideSecond", "onConfirm", "onMaskClose", "onChange"])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-9a209c07"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/uni-datetime-picker.vue"]]);
-  class MPAnimation {
-    constructor(options, _this) {
-      this.options = options;
-      this.animation = uni.createAnimation({
-        ...options
-      });
-      this.currentStepAnimates = {};
-      this.next = 0;
-      this.$ = _this;
-    }
-    _nvuePushAnimates(type, args) {
-      let aniObj = this.currentStepAnimates[this.next];
-      let styles = {};
-      if (!aniObj) {
-        styles = {
-          styles: {},
-          config: {}
-        };
-      } else {
-        styles = aniObj;
-      }
-      if (animateTypes1.includes(type)) {
-        if (!styles.styles.transform) {
-          styles.styles.transform = "";
-        }
-        let unit = "";
-        if (type === "rotate") {
-          unit = "deg";
-        }
-        styles.styles.transform += `${type}(${args + unit}) `;
-      } else {
-        styles.styles[type] = `${args}`;
-      }
-      this.currentStepAnimates[this.next] = styles;
-    }
-    _animateRun(styles = {}, config = {}) {
-      let ref = this.$.$refs["ani"].ref;
-      if (!ref)
-        return;
-      return new Promise((resolve, reject) => {
-        nvueAnimation.transition(ref, {
-          styles,
-          ...config
-        }, (res) => {
-          resolve();
-        });
-      });
-    }
-    _nvueNextAnimate(animates, step = 0, fn) {
-      let obj = animates[step];
-      if (obj) {
-        let {
-          styles,
-          config
-        } = obj;
-        this._animateRun(styles, config).then(() => {
-          step += 1;
-          this._nvueNextAnimate(animates, step, fn);
-        });
-      } else {
-        this.currentStepAnimates = {};
-        typeof fn === "function" && fn();
-        this.isEnd = true;
-      }
-    }
-    step(config = {}) {
-      this.animation.step(config);
-      return this;
-    }
-    run(fn) {
-      this.$.animationData = this.animation.export();
-      this.$.timer = setTimeout(() => {
-        typeof fn === "function" && fn();
-      }, this.$.durationTime);
-    }
-  }
-  const animateTypes1 = [
-    "matrix",
-    "matrix3d",
-    "rotate",
-    "rotate3d",
-    "rotateX",
-    "rotateY",
-    "rotateZ",
-    "scale",
-    "scale3d",
-    "scaleX",
-    "scaleY",
-    "scaleZ",
-    "skew",
-    "skewX",
-    "skewY",
-    "translate",
-    "translate3d",
-    "translateX",
-    "translateY",
-    "translateZ"
-  ];
-  const animateTypes2 = ["opacity", "backgroundColor"];
-  const animateTypes3 = ["width", "height", "left", "right", "top", "bottom"];
-  animateTypes1.concat(animateTypes2, animateTypes3).forEach((type) => {
-    MPAnimation.prototype[type] = function(...args) {
-      this.animation[type](...args);
-      return this;
-    };
-  });
-  function createAnimation(option, _this) {
-    if (!_this)
-      return;
-    clearTimeout(_this.timer);
-    return new MPAnimation(option, _this);
-  }
-  const _sfc_main$3 = {
-    name: "uniTransition",
-    emits: ["click", "change"],
-    props: {
-      show: {
-        type: Boolean,
-        default: false
-      },
-      modeClass: {
-        type: [Array, String],
-        default() {
-          return "fade";
-        }
-      },
-      duration: {
-        type: Number,
-        default: 300
-      },
-      styles: {
-        type: Object,
-        default() {
-          return {};
-        }
-      },
-      customClass: {
-        type: String,
-        default: ""
-      },
-      onceRender: {
-        type: Boolean,
-        default: false
-      }
-    },
-    data() {
-      return {
-        isShow: false,
-        transform: "",
-        opacity: 1,
-        animationData: {},
-        durationTime: 300,
-        config: {}
-      };
-    },
-    watch: {
-      show: {
-        handler(newVal) {
-          if (newVal) {
-            this.open();
-          } else {
-            if (this.isShow) {
-              this.close();
-            }
-          }
-        },
-        immediate: true
-      }
-    },
-    computed: {
-      // 生成样式数据
-      stylesObject() {
-        let styles = {
-          ...this.styles,
-          "transition-duration": this.duration / 1e3 + "s"
-        };
-        let transform = "";
-        for (let i in styles) {
-          let line = this.toLine(i);
-          transform += line + ":" + styles[i] + ";";
-        }
-        return transform;
-      },
-      // 初始化动画条件
-      transformStyles() {
-        return "transform:" + this.transform + ";opacity:" + this.opacity + ";" + this.stylesObject;
-      }
-    },
-    created() {
-      this.config = {
-        duration: this.duration,
-        timingFunction: "ease",
-        transformOrigin: "50% 50%",
-        delay: 0
-      };
-      this.durationTime = this.duration;
-    },
-    methods: {
-      /**
-       *  ref 触发 初始化动画
-       */
-      init(obj = {}) {
-        if (obj.duration) {
-          this.durationTime = obj.duration;
-        }
-        this.animation = createAnimation(Object.assign(this.config, obj), this);
-      },
-      /**
-       * 点击组件触发回调
-       */
-      onClick() {
-        this.$emit("click", {
-          detail: this.isShow
-        });
-      },
-      /**
-       * ref 触发 动画分组
-       * @param {Object} obj
-       */
-      step(obj, config = {}) {
-        if (!this.animation)
-          return;
-        for (let i in obj) {
-          try {
-            if (typeof obj[i] === "object") {
-              this.animation[i](...obj[i]);
-            } else {
-              this.animation[i](obj[i]);
-            }
-          } catch (e) {
-            formatAppLog("error", "at node_modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.vue:148", `方法 ${i} 不存在`);
-          }
-        }
-        this.animation.step(config);
-        return this;
-      },
-      /**
-       *  ref 触发 执行动画
-       */
-      run(fn) {
-        if (!this.animation)
-          return;
-        this.animation.run(fn);
-      },
-      // 开始过度动画
-      open() {
-        clearTimeout(this.timer);
-        this.transform = "";
-        this.isShow = true;
-        let { opacity, transform } = this.styleInit(false);
-        if (typeof opacity !== "undefined") {
-          this.opacity = opacity;
-        }
-        this.transform = transform;
-        this.$nextTick(() => {
-          this.timer = setTimeout(() => {
-            this.animation = createAnimation(this.config, this);
-            this.tranfromInit(false).step();
-            this.animation.run();
-            this.$emit("change", {
-              detail: this.isShow
-            });
-          }, 20);
-        });
-      },
-      // 关闭过度动画
-      close(type) {
-        if (!this.animation)
-          return;
-        this.tranfromInit(true).step().run(() => {
-          this.isShow = false;
-          this.animationData = null;
-          this.animation = null;
-          let { opacity, transform } = this.styleInit(false);
-          this.opacity = opacity || 1;
-          this.transform = transform;
-          this.$emit("change", {
-            detail: this.isShow
-          });
-        });
-      },
-      // 处理动画开始前的默认样式
-      styleInit(type) {
-        let styles = {
-          transform: ""
-        };
-        let buildStyle = (type2, mode) => {
-          if (mode === "fade") {
-            styles.opacity = this.animationType(type2)[mode];
-          } else {
-            styles.transform += this.animationType(type2)[mode] + " ";
-          }
-        };
-        if (typeof this.modeClass === "string") {
-          buildStyle(type, this.modeClass);
-        } else {
-          this.modeClass.forEach((mode) => {
-            buildStyle(type, mode);
-          });
-        }
-        return styles;
-      },
-      // 处理内置组合动画
-      tranfromInit(type) {
-        let buildTranfrom = (type2, mode) => {
-          let aniNum = null;
-          if (mode === "fade") {
-            aniNum = type2 ? 0 : 1;
-          } else {
-            aniNum = type2 ? "-100%" : "0";
-            if (mode === "zoom-in") {
-              aniNum = type2 ? 0.8 : 1;
-            }
-            if (mode === "zoom-out") {
-              aniNum = type2 ? 1.2 : 1;
-            }
-            if (mode === "slide-right") {
-              aniNum = type2 ? "100%" : "0";
-            }
-            if (mode === "slide-bottom") {
-              aniNum = type2 ? "100%" : "0";
-            }
-          }
-          this.animation[this.animationMode()[mode]](aniNum);
-        };
-        if (typeof this.modeClass === "string") {
-          buildTranfrom(type, this.modeClass);
-        } else {
-          this.modeClass.forEach((mode) => {
-            buildTranfrom(type, mode);
-          });
-        }
-        return this.animation;
-      },
-      animationType(type) {
-        return {
-          fade: type ? 0 : 1,
-          "slide-top": `translateY(${type ? "0" : "-100%"})`,
-          "slide-right": `translateX(${type ? "0" : "100%"})`,
-          "slide-bottom": `translateY(${type ? "0" : "100%"})`,
-          "slide-left": `translateX(${type ? "0" : "-100%"})`,
-          "zoom-in": `scaleX(${type ? 1 : 0.8}) scaleY(${type ? 1 : 0.8})`,
-          "zoom-out": `scaleX(${type ? 1 : 1.2}) scaleY(${type ? 1 : 1.2})`
-        };
-      },
-      // 内置动画类型与实际动画对应字典
-      animationMode() {
-        return {
-          fade: "opacity",
-          "slide-top": "translateY",
-          "slide-right": "translateX",
-          "slide-bottom": "translateY",
-          "slide-left": "translateX",
-          "zoom-in": "scale",
-          "zoom-out": "scale"
-        };
-      },
-      // 驼峰转中横线
-      toLine(name) {
-        return name.replace(/([A-Z])/g, "-$1").toLowerCase();
-      }
-    }
-  };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("view", {
-      ref: "ani",
-      animation: $data.animationData,
-      class: vue.normalizeClass($props.customClass),
-      style: vue.normalizeStyle($options.transformStyles),
-      onClick: _cache[0] || (_cache[0] = (...args) => $options.onClick && $options.onClick(...args))
-    }, [
-      vue.renderSlot(_ctx.$slots, "default")
-    ], 14, ["animation"])), [
-      [vue.vShow, $data.isShow]
-    ]);
-  }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition.vue"]]);
-  const _sfc_main$2 = {
-    name: "uniPopup",
-    components: {},
-    emits: ["change", "maskClick"],
-    props: {
-      // 开启动画
-      animation: {
-        type: Boolean,
-        default: true
-      },
-      // 弹出层类型，可选值，top: 顶部弹出层；bottom：底部弹出层；center：全屏弹出层
-      // message: 消息提示 ; dialog : 对话框
-      type: {
-        type: String,
-        default: "center"
-      },
-      // maskClick
-      isMaskClick: {
-        type: Boolean,
-        default: null
-      },
-      // TODO 2 个版本后废弃属性 ，使用 isMaskClick
-      maskClick: {
-        type: Boolean,
-        default: null
-      },
-      backgroundColor: {
-        type: String,
-        default: "none"
-      },
-      safeArea: {
-        type: Boolean,
-        default: true
-      },
-      maskBackgroundColor: {
-        type: String,
-        default: "rgba(0, 0, 0, 0.4)"
-      },
-      borderRadius: {
-        type: String
-      }
-    },
-    watch: {
-      /**
-       * 监听type类型
-       */
-      type: {
-        handler: function(type) {
-          if (!this.config[type])
-            return;
-          this[this.config[type]](true);
-        },
-        immediate: true
-      },
-      isDesktop: {
-        handler: function(newVal) {
-          if (!this.config[newVal])
-            return;
-          this[this.config[this.type]](true);
-        },
-        immediate: true
-      },
-      /**
-       * 监听遮罩是否可点击
-       * @param {Object} val
-       */
-      maskClick: {
-        handler: function(val) {
-          this.mkclick = val;
-        },
-        immediate: true
-      },
-      isMaskClick: {
-        handler: function(val) {
-          this.mkclick = val;
-        },
-        immediate: true
-      },
-      // H5 下禁止底部滚动
-      showPopup(show) {
-      }
-    },
-    data() {
-      return {
-        duration: 300,
-        ani: [],
-        showPopup: false,
-        showTrans: false,
-        popupWidth: 0,
-        popupHeight: 0,
-        config: {
-          top: "top",
-          bottom: "bottom",
-          center: "center",
-          left: "left",
-          right: "right",
-          message: "top",
-          dialog: "center",
-          share: "bottom"
-        },
-        maskClass: {
-          position: "fixed",
-          bottom: 0,
-          top: 0,
-          left: 0,
-          right: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.4)"
-        },
-        transClass: {
-          backgroundColor: "transparent",
-          borderRadius: this.borderRadius || "0",
-          position: "fixed",
-          left: 0,
-          right: 0
-        },
-        maskShow: true,
-        mkclick: true,
-        popupstyle: "top"
-      };
-    },
-    computed: {
-      getStyles() {
-        let res = { backgroundColor: this.bg };
-        if (this.borderRadius || "0") {
-          res = Object.assign(res, { borderRadius: this.borderRadius });
-        }
-        return res;
-      },
-      isDesktop() {
-        return this.popupWidth >= 500 && this.popupHeight >= 500;
-      },
-      bg() {
-        if (this.backgroundColor === "" || this.backgroundColor === "none") {
-          return "transparent";
-        }
-        return this.backgroundColor;
-      }
-    },
-    mounted() {
-      const fixSize = () => {
-        const {
-          windowWidth,
-          windowHeight,
-          windowTop,
-          safeArea,
-          screenHeight,
-          safeAreaInsets
-        } = uni.getSystemInfoSync();
-        this.popupWidth = windowWidth;
-        this.popupHeight = windowHeight + (windowTop || 0);
-        if (safeArea && this.safeArea) {
-          this.safeAreaInsets = safeAreaInsets.bottom;
-        } else {
-          this.safeAreaInsets = 0;
-        }
-      };
-      fixSize();
-    },
-    // TODO vue3
-    unmounted() {
-      this.setH5Visible();
-    },
-    activated() {
-      this.setH5Visible(!this.showPopup);
-    },
-    deactivated() {
-      this.setH5Visible(true);
-    },
-    created() {
-      if (this.isMaskClick === null && this.maskClick === null) {
-        this.mkclick = true;
-      } else {
-        this.mkclick = this.isMaskClick !== null ? this.isMaskClick : this.maskClick;
-      }
-      if (this.animation) {
-        this.duration = 300;
-      } else {
-        this.duration = 0;
-      }
-      this.messageChild = null;
-      this.clearPropagation = false;
-      this.maskClass.backgroundColor = this.maskBackgroundColor;
-    },
-    methods: {
-      setH5Visible(visible = true) {
-      },
-      /**
-       * 公用方法，不显示遮罩层
-       */
-      closeMask() {
-        this.maskShow = false;
-      },
-      /**
-       * 公用方法，遮罩层禁止点击
-       */
-      disableMask() {
-        this.mkclick = false;
-      },
-      // TODO nvue 取消冒泡
-      clear(e) {
-        e.stopPropagation();
-        this.clearPropagation = true;
-      },
-      open(direction) {
-        if (this.showPopup) {
-          return;
-        }
-        let innerType = ["top", "center", "bottom", "left", "right", "message", "dialog", "share"];
-        if (!(direction && innerType.indexOf(direction) !== -1)) {
-          direction = this.type;
-        }
-        if (!this.config[direction]) {
-          formatAppLog("error", "at node_modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.vue:310", "缺少类型：", direction);
-          return;
-        }
-        this[this.config[direction]]();
-        this.$emit("change", {
-          show: true,
-          type: direction
-        });
-      },
-      close(type) {
-        this.showTrans = false;
-        this.$emit("change", {
-          show: false,
-          type: this.type
-        });
-        clearTimeout(this.timer);
-        this.timer = setTimeout(() => {
-          this.showPopup = false;
-        }, 300);
-      },
-      // TODO 处理冒泡事件，头条的冒泡事件有问题 ，先这样兼容
-      touchstart() {
-        this.clearPropagation = false;
-      },
-      onTap() {
-        if (this.clearPropagation) {
-          this.clearPropagation = false;
-          return;
-        }
-        this.$emit("maskClick");
-        if (!this.mkclick)
-          return;
-        this.close();
-      },
-      /**
-       * 顶部弹出样式处理
-       */
-      top(type) {
-        this.popupstyle = this.isDesktop ? "fixforpc-top" : "top";
-        this.ani = ["slide-top"];
-        this.transClass = {
-          position: "fixed",
-          left: 0,
-          right: 0,
-          backgroundColor: this.bg,
-          borderRadius: this.borderRadius || "0"
-        };
-        if (type)
-          return;
-        this.showPopup = true;
-        this.showTrans = true;
-        this.$nextTick(() => {
-          this.showPoptrans();
-          if (this.messageChild && this.type === "message") {
-            this.messageChild.timerClose();
-          }
-        });
-      },
-      /**
-       * 底部弹出样式处理
-       */
-      bottom(type) {
-        this.popupstyle = "bottom";
-        this.ani = ["slide-bottom"];
-        this.transClass = {
-          position: "fixed",
-          left: 0,
-          right: 0,
-          bottom: 0,
-          paddingBottom: this.safeAreaInsets + "px",
-          backgroundColor: this.bg,
-          borderRadius: this.borderRadius || "0"
-        };
-        if (type)
-          return;
-        this.showPoptrans();
-      },
-      /**
-       * 中间弹出样式处理
-       */
-      center(type) {
-        this.popupstyle = "center";
-        this.ani = ["zoom-out", "fade"];
-        this.transClass = {
-          position: "fixed",
-          display: "flex",
-          flexDirection: "column",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          top: 0,
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: this.borderRadius || "0"
-        };
-        if (type)
-          return;
-        this.showPoptrans();
-      },
-      left(type) {
-        this.popupstyle = "left";
-        this.ani = ["slide-left"];
-        this.transClass = {
-          position: "fixed",
-          left: 0,
-          bottom: 0,
-          top: 0,
-          backgroundColor: this.bg,
-          borderRadius: this.borderRadius || "0",
-          display: "flex",
-          flexDirection: "column"
-        };
-        if (type)
-          return;
-        this.showPoptrans();
-      },
-      right(type) {
-        this.popupstyle = "right";
-        this.ani = ["slide-right"];
-        this.transClass = {
-          position: "fixed",
-          bottom: 0,
-          right: 0,
-          top: 0,
-          backgroundColor: this.bg,
-          borderRadius: this.borderRadius || "0",
-          display: "flex",
-          flexDirection: "column"
-        };
-        if (type)
-          return;
-        this.showPoptrans();
-      },
-      showPoptrans() {
-        this.$nextTick(() => {
-          this.showPopup = true;
-          this.showTrans = true;
-        });
-      }
-    }
-  };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_transition = resolveEasycom(vue.resolveDynamicComponent("uni-transition"), __easycom_0);
-    return $data.showPopup ? (vue.openBlock(), vue.createElementBlock(
-      "view",
-      {
-        key: 0,
-        class: vue.normalizeClass(["uni-popup", [$data.popupstyle, $options.isDesktop ? "fixforpc-z-index" : ""]])
-      },
-      [
-        vue.createElementVNode(
-          "view",
-          {
-            onTouchstart: _cache[1] || (_cache[1] = (...args) => $options.touchstart && $options.touchstart(...args))
-          },
-          [
-            $data.maskShow ? (vue.openBlock(), vue.createBlock(_component_uni_transition, {
-              key: "1",
-              name: "mask",
-              "mode-class": "fade",
-              styles: $data.maskClass,
-              duration: $data.duration,
-              show: $data.showTrans,
-              onClick: $options.onTap
-            }, null, 8, ["styles", "duration", "show", "onClick"])) : vue.createCommentVNode("v-if", true),
-            vue.createVNode(_component_uni_transition, {
-              key: "2",
-              "mode-class": $data.ani,
-              name: "content",
-              styles: $data.transClass,
-              duration: $data.duration,
-              show: $data.showTrans,
-              onClick: $options.onTap
-            }, {
-              default: vue.withCtx(() => [
-                vue.createElementVNode(
-                  "view",
-                  {
-                    class: vue.normalizeClass(["uni-popup__wrapper", [$data.popupstyle]]),
-                    style: vue.normalizeStyle($options.getStyles),
-                    onClick: _cache[0] || (_cache[0] = (...args) => $options.clear && $options.clear(...args))
-                  },
-                  [
-                    vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
-                  ],
-                  6
-                  /* CLASS, STYLE */
-                )
-              ]),
-              _: 3
-              /* FORWARDED */
-            }, 8, ["mode-class", "styles", "duration", "show", "onClick"])
-          ],
-          32
-          /* NEED_HYDRATION */
-        )
-      ],
-      2
-      /* CLASS */
-    )) : vue.createCommentVNode("v-if", true);
-  }
-  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-7db519c7"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-9a209c07"], ["__file", "C:/Users/admin/Documents/HBuilderProjects/uni-money/node_modules/@dcloudio/uni-ui/lib/uni-datetime-picker/uni-datetime-picker.vue"]]);
   const _sfc_main$1 = {
     __name: "record",
     setup(__props, { expose: __expose }) {
@@ -10057,12 +9715,47 @@ This will fail in production.`);
       const quickCategories = vue.computed(() => {
         return formData.type === 0 ? categories.value.filter((item) => [2, 4, 5, 6].includes(item.value)) : categories.value.filter((item) => [1, 3].includes(item.value));
       });
-      const accounts = vue.ref([
-        { id: 1, name: "现金账户", balance: "28,500.00", type: "现金" },
-        { id: 2, name: "工商银行", balance: "50,000.00", type: "银行卡" },
-        { id: 3, name: "支付宝", balance: "30,000.00", type: "支付宝" },
-        { id: 4, name: "微信钱包", balance: "20,000.00", type: "微信" }
-      ]);
+      const accounts = vue.ref([]);
+      const isLoading = vue.ref(false);
+      const refreshAccounts = async () => {
+        if (isLoading.value)
+          return;
+        try {
+          isLoading.value = true;
+          const token = uni.getStorageSync("token");
+          const res = await request.get("/api/assets/accounts", {
+            header: {
+              "Authorization": token
+            }
+          });
+          if (res.data) {
+            accounts.value = res.data;
+          }
+        } catch (error) {
+          if (error.statusCode === 401) {
+            uni.showToast({
+              title: "登录已过期，请重新登录",
+              icon: "none"
+            });
+            uni.removeStorageSync("token");
+            setTimeout(() => {
+              uni.redirectTo({
+                url: "/pages/login/login"
+              });
+            }, 1500);
+            return;
+          }
+          uni.showToast({
+            title: error.message || "获取数据失败",
+            icon: "none"
+          });
+        } finally {
+          isLoading.value = false;
+        }
+      };
+      vue.onMounted(() => {
+        refreshAccounts();
+      });
       const rules = {
         amount: {
           rules: [{
@@ -10095,12 +9788,17 @@ This will fail in production.`);
           const valid = await form.value.validate();
           if (!valid)
             return;
+          const token = uni.getStorageSync("token");
           const result = await request.post("/api/transactions", {
             type: formData.type,
             amount: parseFloat(formData.amount),
             category_id: formData.category_id,
             account_id: formData.account_id,
             date: formData.date
+          }, {
+            header: {
+              "Authorization": token
+            }
           });
           if (result.data) {
             uni.showToast({
@@ -10117,6 +9815,19 @@ This will fail in production.`);
             }, 1500);
           }
         } catch (error) {
+          if (error.statusCode === 401) {
+            uni.showToast({
+              title: "登录已过期，请重新登录",
+              icon: "none"
+            });
+            uni.removeStorageSync("token");
+            setTimeout(() => {
+              uni.redirectTo({
+                url: "/pages/login/login"
+              });
+            }, 1500);
+            return;
+          }
           uni.showToast({
             title: error.message || "操作失败",
             icon: "none"
@@ -10145,7 +9856,7 @@ This will fail in production.`);
         formData.account_id = item.id;
         hideAccountPicker();
       };
-      const __returned__ = { form, formData, categories, quickCategories, accounts, rules, handleTypeChange, handleQuickCategorySelect, handleSubmit, categoryPicker, accountPicker, showCategoryPicker, hideCategoryPicker, showAccountPicker, hideAccountPicker, handleCategorySelect, handleAccountSelect, ref: vue.ref, reactive: vue.reactive, computed: vue.computed, get request() {
+      const __returned__ = { form, formData, categories, quickCategories, accounts, isLoading, refreshAccounts, rules, handleTypeChange, handleQuickCategorySelect, handleSubmit, categoryPicker, accountPicker, showCategoryPicker, hideCategoryPicker, showAccountPicker, hideAccountPicker, handleCategorySelect, handleAccountSelect, ref: vue.ref, reactive: vue.reactive, computed: vue.computed, onMounted: vue.onMounted, get request() {
         return request;
       } };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
@@ -10153,9 +9864,9 @@ This will fail in production.`);
     }
   };
   function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_0$2);
+    const _component_uni_forms_item = resolveEasycom(vue.resolveDynamicComponent("uni-forms-item"), __easycom_0$1);
     const _component_uni_datetime_picker = resolveEasycom(vue.resolveDynamicComponent("uni-datetime-picker"), __easycom_1);
-    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2$1);
+    const _component_uni_forms = resolveEasycom(vue.resolveDynamicComponent("uni-forms"), __easycom_2);
     const _component_uni_popup = resolveEasycom(vue.resolveDynamicComponent("uni-popup"), __easycom_3);
     return vue.openBlock(), vue.createElementBlock("view", { class: "record-container" }, [
       vue.createCommentVNode(" 顶部导航 "),
@@ -10164,7 +9875,7 @@ This will fail in production.`);
           class: "iconfont icon-back",
           onClick: _cache[0] || (_cache[0] = ($event) => _ctx.uni.navigateBack())
         }),
-        vue.createElementVNode("text", { class: "title" }, "记账")
+        vue.createElementVNode("text", { class: "title" }, "记一笔")
       ]),
       vue.createCommentVNode(" 类型切换 "),
       vue.createElementVNode("view", { class: "type-switch" }, [
@@ -10194,26 +9905,27 @@ This will fail in production.`);
         )
       ]),
       vue.createCommentVNode(" 金额输入 "),
-      vue.createElementVNode("view", { class: "amount-input" }, [
-        vue.createElementVNode("text", { class: "currency" }, "￥"),
-        vue.withDirectives(vue.createElementVNode(
-          "input",
-          {
-            type: "digit",
-            "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => $setup.formData.amount = $event),
-            placeholder: "请输入金额",
-            "placeholder-class": "placeholder"
-          },
-          null,
-          512
-          /* NEED_PATCH */
-        ), [
-          [vue.vModelText, $setup.formData.amount]
+      vue.createElementVNode("view", { class: "amount-card" }, [
+        vue.createElementVNode("view", { class: "amount-input" }, [
+          vue.createElementVNode("text", { class: "currency" }, "￥"),
+          vue.withDirectives(vue.createElementVNode(
+            "input",
+            {
+              type: "digit",
+              "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => $setup.formData.amount = $event),
+              placeholder: "0.00",
+              "placeholder-class": "placeholder"
+            },
+            null,
+            512
+            /* NEED_PATCH */
+          ), [
+            [vue.vModelText, $setup.formData.amount]
+          ])
         ])
       ]),
       vue.createCommentVNode(" 常用分类 "),
       vue.createElementVNode("view", { class: "quick-categories" }, [
-        vue.createElementVNode("text", { class: "section-title" }, "常用分类"),
         vue.createElementVNode("view", { class: "category-grid" }, [
           (vue.openBlock(true), vue.createElementBlock(
             vue.Fragment,
@@ -10224,17 +9936,25 @@ This will fail in production.`);
                 class: vue.normalizeClass(["category-item", { active: $setup.formData.category_id === item.value }]),
                 onClick: ($event) => $setup.handleQuickCategorySelect(item)
               }, [
-                vue.createElementVNode("view", { class: "icon-wrapper" }, [
-                  vue.createElementVNode(
-                    "text",
-                    {
-                      class: vue.normalizeClass(["iconfont", item.icon])
-                    },
-                    null,
-                    2
-                    /* CLASS */
-                  )
-                ]),
+                vue.createElementVNode(
+                  "view",
+                  {
+                    class: vue.normalizeClass(["icon-wrapper", item.icon])
+                  },
+                  [
+                    vue.createElementVNode(
+                      "text",
+                      {
+                        class: vue.normalizeClass(["iconfont", item.icon])
+                      },
+                      null,
+                      2
+                      /* CLASS */
+                    )
+                  ],
+                  2
+                  /* CLASS */
+                ),
                 vue.createElementVNode(
                   "text",
                   { class: "category-name" },
@@ -10265,7 +9985,10 @@ This will fail in production.`);
                     class: "form-item",
                     onClick: $setup.showCategoryPicker
                   }, [
-                    vue.createElementVNode("text", { class: "label" }, "分类"),
+                    vue.createElementVNode("view", { class: "label-wrapper" }, [
+                      vue.createElementVNode("text", { class: "iconfont icon-category" }),
+                      vue.createElementVNode("text", { class: "label" }, "分类")
+                    ]),
                     vue.createElementVNode("view", { class: "value" }, [
                       vue.createElementVNode(
                         "text",
@@ -10292,7 +10015,10 @@ This will fail in production.`);
                     class: "form-item",
                     onClick: $setup.showAccountPicker
                   }, [
-                    vue.createElementVNode("text", { class: "label" }, "账户"),
+                    vue.createElementVNode("view", { class: "label-wrapper" }, [
+                      vue.createElementVNode("text", { class: "iconfont icon-wallet" }),
+                      vue.createElementVNode("text", { class: "label" }, "账户")
+                    ]),
                     vue.createElementVNode("view", { class: "value" }, [
                       vue.createElementVNode(
                         "text",
@@ -10314,7 +10040,10 @@ This will fail in production.`);
             vue.createVNode(_component_uni_forms_item, { name: "date" }, {
               default: vue.withCtx(() => [
                 vue.createElementVNode("view", { class: "form-item" }, [
-                  vue.createElementVNode("text", { class: "label" }, "日期"),
+                  vue.createElementVNode("view", { class: "label-wrapper" }, [
+                    vue.createElementVNode("text", { class: "iconfont icon-calendar" }),
+                    vue.createElementVNode("text", { class: "label" }, "日期")
+                  ]),
                   vue.createElementVNode("view", { class: "value" }, [
                     vue.createVNode(_component_uni_datetime_picker, {
                       modelValue: $setup.formData.date,
@@ -10370,15 +10099,17 @@ This will fail in production.`);
                       onClick: ($event) => $setup.handleCategorySelect(item)
                     }, [
                       vue.createElementVNode("view", { class: "picker-item-left" }, [
-                        vue.createElementVNode(
-                          "text",
-                          {
-                            class: vue.normalizeClass(["iconfont", item.icon])
-                          },
-                          null,
-                          2
-                          /* CLASS */
-                        ),
+                        vue.createElementVNode("view", { class: "picker-icon-wrapper" }, [
+                          vue.createElementVNode(
+                            "text",
+                            {
+                              class: vue.normalizeClass(["iconfont", item.icon])
+                            },
+                            null,
+                            2
+                            /* CLASS */
+                          )
+                        ]),
                         vue.createElementVNode(
                           "text",
                           null,
@@ -10435,20 +10166,22 @@ This will fail in production.`);
                       onClick: ($event) => $setup.handleAccountSelect(item)
                     }, [
                       vue.createElementVNode("view", { class: "picker-item-left" }, [
-                        vue.createElementVNode(
-                          "text",
-                          {
-                            class: vue.normalizeClass(["iconfont", {
-                              "icon-cash": item.type === "现金",
-                              "icon-bank": item.type === "银行卡",
-                              "icon-alipay": item.type === "支付宝",
-                              "icon-wechat": item.type === "微信"
-                            }])
-                          },
-                          null,
-                          2
-                          /* CLASS */
-                        ),
+                        vue.createElementVNode("view", { class: "picker-icon-wrapper" }, [
+                          vue.createElementVNode(
+                            "text",
+                            {
+                              class: vue.normalizeClass(["iconfont", {
+                                "icon-cash": item.type === "现金",
+                                "icon-bank": item.type === "银行卡",
+                                "icon-alipay": item.type === "支付宝",
+                                "icon-wechat": item.type === "微信"
+                              }])
+                            },
+                            null,
+                            2
+                            /* CLASS */
+                          )
+                        ]),
                         vue.createElementVNode(
                           "text",
                           null,

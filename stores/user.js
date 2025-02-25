@@ -4,26 +4,29 @@ import request from '@/utils/request'
 
 export const useUserStore = defineStore('user', () => {
 	const token = ref('')
-	const refreshToken = ref('')
 	const userInfo = ref(null)
 	
 	// 登录
 	const login = async (data) => {
 		try {
 			const res = await request.post('/api/auth/login', data)
+			console.log('【UserStore】登录响应:', res.data)
 			
-			// 保存token和用户信息
-			token.value = res.data.access_token
-			refreshToken.value = res.data.refresh_token
-			userInfo.value = res.data.user
-			
-			// 保存到本地存储
-			uni.setStorageSync('access_token', res.data.access_token)
-			uni.setStorageSync('refresh_token', res.data.refresh_token)
-			uni.setStorageSync('user_info', res.data.user)
-			
-			return true
+			if (res.data && res.data.data && res.data.data.token) {
+				// 保存token和用户信息
+				token.value = res.data.data.token
+				userInfo.value = res.data.data.user
+				
+				// 保存到本地存储
+				uni.setStorageSync('token', res.data.data.token)
+				uni.setStorageSync('user_info', res.data.data.user)
+				
+				console.log('【UserStore】Token已保存:', token.value)
+				return true
+			}
+			throw new Error('登录响应中没有token')
 		} catch (error) {
+			console.error('【UserStore】登录失败:', error)
 			throw error
 		}
 	}
@@ -41,27 +44,13 @@ export const useUserStore = defineStore('user', () => {
 	// 获取用户信息
 	const getUserInfo = async () => {
 		try {
-			const res = await request.get('/api/auth/me')
-			userInfo.value = res.data
-			return res.data
-		} catch (error) {
-			throw error
-		}
-	}
-	
-	// 刷新token
-	const refreshAccessToken = async () => {
-		try {
-			const res = await request.post('/api/auth/refresh', null, {
-				headers: {
-					'Authorization': `Bearer ${refreshToken.value}`
-				}
-			})
-			
-			token.value = res.data.access_token
-			uni.setStorageSync('access_token', res.data.access_token)
-			
-			return res.data.access_token
+			// 由于没有/me接口，我们直接返回本地存储的用户信息
+			const userInfoStorage = uni.getStorageSync('user_info')
+			if (userInfoStorage) {
+				userInfo.value = userInfoStorage
+				return userInfoStorage
+			}
+			throw new Error('未找到用户信息')
 		} catch (error) {
 			throw error
 		}
@@ -70,11 +59,9 @@ export const useUserStore = defineStore('user', () => {
 	// 退出登录
 	const logout = () => {
 		token.value = ''
-		refreshToken.value = ''
 		userInfo.value = null
 		
-		uni.removeStorageSync('access_token')
-		uni.removeStorageSync('refresh_token')
+		uni.removeStorageSync('token')
 		uni.removeStorageSync('user_info')
 		
 		// 跳转到登录页
@@ -84,24 +71,36 @@ export const useUserStore = defineStore('user', () => {
 	}
 	
 	// 初始化状态
-	const initState = () => {
-		const accessToken = uni.getStorageSync('access_token')
-		const refreshTokenStorage = uni.getStorageSync('refresh_token')
-		const userInfoStorage = uni.getStorageSync('user_info')
-		
-		if (accessToken) token.value = accessToken
-		if (refreshTokenStorage) refreshToken.value = refreshTokenStorage
-		if (userInfoStorage) userInfo.value = userInfoStorage
+	const initState = async () => {
+		try {
+			console.log('【UserStore】开始初始化状态')
+			const storedToken = uni.getStorageSync('token')
+			const userInfoStorage = uni.getStorageSync('user_info')
+			
+			console.log('【UserStore】存储的token:', storedToken)
+			console.log('【UserStore】存储的用户信息:', userInfoStorage)
+			
+			if (storedToken && userInfoStorage) {
+				token.value = storedToken
+				userInfo.value = userInfoStorage
+				console.log('【UserStore】用户状态初始化成功')
+				return true
+			}
+			
+			console.log('【UserStore】没有找到token或用户信息')
+			return false
+		} catch (error) {
+			console.error('【UserStore】初始化状态失败:', error)
+			return false
+		}
 	}
 	
 	return {
 		token,
-		refreshToken,
 		userInfo,
 		login,
 		register,
 		getUserInfo,
-		refreshAccessToken,
 		logout,
 		initState
 	}
